@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Xblydxj">
     <meta name="description" content="Coder">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="Xblydxj&#39;s Blog">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -304,6 +304,15 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aQW7DMAwEwPz/0+21QFtlV5IVJxifgiSwNT6QBMnH10dfDzw8PDw8PDw8vJvxHvH1x41+fP/f5/Gzfn+/fjY8PDy8M7wnoTY47tyvc69pfDY8PDy8k7xx4P7v0HmgT5LEytnw8PDw3ouXh/6VJIGHh4f3vry2iTAutcf/xMPDw7szLw/c4wcnpDZhHOq14OHh4cW8fMh0/vPR+R4eHh5ewKtXmuISuS3HkzRQL13h4eHhXcDLA/FcibyeYPIlMDw8PLwzvHyony8EJPeMGrLxmgIeHh7eHXhtszVPJyuFe3QePDw8vIt5yUCrTQD5a2qL9aUuNR4eHt4RXn7odr2gbQQnBT0eHh7eSV4b9PNSexzW59LGkxSCh4eHdzFvV3m9dy2gHZvh4eHhnedFpWoQ0NvCuh2YTXap8fDw8C7g5Q3ZtsmbH27uifXqAB4eHt4yb26cv9LqzRPMXGrBw8PDO8NrB/Ytcq6RsaGkxsPDwzvIy1dUW8y4tdE2JvDw8PBey8sHUbsSQ5t+NuyU4eHh4W3l5YVsEaaDO+9q+OLh4eGd5CXLAXlB3K5MTTKSpSs8PDy8I7x8DNaOr1rA3P3x8PDwXsvLE8Cub/ISf7KkxsPDw1vmtVc7KptrSWxLDHh4eHgX8ObCcf7gvBG8bZyGh4eHd4SXNyBWjjJOA21ruG5G4OHh4V3A23X0hDFXfEfjOjw8PLxb8tomQjsei9q1eHh4eG/IS8ZabapYeZV4eHh453n5otX6sD//z9E2Lh4eHt4FA7A8cBfD/uVlAjw8PLyTvM+78PDw8PDw8PDwbnB9A5J0NQDeVadIAAAAAElFTkSuQmCC">
+        </ul>
+    
 
     <!-- Tags (bookmark) -->
     
@@ -325,6 +334,17 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
     
 
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
     
 
     <!-- Share Weibo -->
@@ -405,6 +425,81 @@
 
 
 
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'https://xblydxj.github.io/2017/03/28/hello-world/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//xblydxj.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
                 
             </div>
 
@@ -453,7 +548,7 @@
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
+        xblydxj@gmail.com
         <b class="caret"></b>
     </a>
 </div>
@@ -466,7 +561,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto: someone@example.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -580,6 +675,8 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     <!--Footer-->
+<!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script> -->
 <footer class="mdl-mini-footer" id="bottom">
     
         <!-- Paradox Footer Left Section -->
@@ -622,14 +719,32 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Github -->
     
+        <a href="https://www.github.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
 
     <!-- LinkedIn -->
     
 
     <!-- Zhihu -->
     
+        <a href="https://www.zhihu.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.png);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
 
     <!-- Bilibili -->
+    
+        <a href="https://www.bilibili.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-bilibili.png);">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
     
 
     <!-- Telegram -->
@@ -695,9 +810,14 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+    <script src="/js/smoothscroll.js"></script>
 
 
 
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
