@@ -401,23 +401,19 @@
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h5 id="1-高级函数"><a href="#1-高级函数" class="headerlink" title="1. 高级函数"></a>1. 高级函数</h5><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">def add(x, y, f):</div><div class="line">return f(x) + f(y)</div><div class="line"></div><div class="line">&gt;&gt;&gt; add(2, -5, abs);</div><div class="line">7</div></pre></td></tr></table></figure>
 
 可以将函数abs当做变量传入add函数参与运算。
-
-1. map:
-
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def f(x):</div><div class="line">...     return x * x</div><div class="line">...</div><div class="line">&gt;&gt;&gt; r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])</div><div class="line">&gt;&gt;&gt; list(r)</div><div class="line">[1, 4, 9, 16, 25, 36, 49, 64, 81]</div><div class="line"></div><div class="line">&gt;&gt;&gt; list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9]))</div><div class="line">[&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;, &apos;7&apos;, &apos;8&apos;, &apos;9&apos;]</div></pre></td></tr></table></figure>
-
-  作为键值对，以后者的Iterator作为底数进行前者的迭代运算并输出。
-2. reduce:
-
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; from functools import reduce</div><div class="line">&gt;&gt;&gt; def fn(x, y):</div><div class="line">...     return x * 10 + y</div><div class="line">...</div><div class="line">&gt;&gt;&gt; reduce(fn, [1, 3, 5, 7, 9])</div><div class="line">13579</div></pre></td></tr></table></figure>
-
-  抽取后者的Iterator的前两个元素进行前者的运算并迭代输出。
-3. filter:
-
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">def is_odd(n):</div><div class="line">    return n % 2 == 1</div><div class="line">list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]))</div><div class="line"># 结果: [1, 5, 9, 15]</div><div class="line"></div><div class="line">def not_empty(s):</div><div class="line">    return s and s.strip()</div><div class="line">list(filter(not_empty, [&apos;A&apos;, &apos;&apos;, &apos;B&apos;, None, &apos;C&apos;, &apos;  &apos;]))</div><div class="line"># 结果: [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div></pre></td></tr></table></figure>
-
-  第二个判断为s为空则返回s.strip()&lt;del&gt;(去除空格)&lt;/del&gt;，s不为空返回s。  
 </code></pre><ol>
+<li><p>map:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; def f(x):</div><div class="line">...     return x * x</div><div class="line">...</div><div class="line">&gt;&gt;&gt; r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])</div><div class="line">&gt;&gt;&gt; list(r)</div><div class="line">[1, 4, 9, 16, 25, 36, 49, 64, 81]</div><div class="line"></div><div class="line">&gt;&gt;&gt; list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9]))</div><div class="line">[&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;, &apos;7&apos;, &apos;8&apos;, &apos;9&apos;]</div></pre></td></tr></table></figure>
+<p>作为键值对，以后者的Iterator作为底数进行前者的迭代运算并输出。</p>
+</li>
+<li><p>reduce:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; from functools import reduce</div><div class="line">&gt;&gt;&gt; def fn(x, y):</div><div class="line">...     return x * 10 + y</div><div class="line">...</div><div class="line">&gt;&gt;&gt; reduce(fn, [1, 3, 5, 7, 9])</div><div class="line">13579</div></pre></td></tr></table></figure>
+<p>抽取后者的Iterator的前两个元素进行前者的运算并迭代输出。</p>
+</li>
+<li><p>filter:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">def is_odd(n):</div><div class="line">    return n % 2 == 1</div><div class="line">list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]))</div><div class="line"># 结果: [1, 5, 9, 15]</div><div class="line"></div><div class="line">def not_empty(s):</div><div class="line">    return s and s.strip()</div><div class="line">list(filter(not_empty, [&apos;A&apos;, &apos;&apos;, &apos;B&apos;, None, &apos;C&apos;, &apos;  &apos;]))</div><div class="line"># 结果: [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div></pre></td></tr></table></figure>
+<p>第二个判断为s为空则返回s.strip()<del>(去除空格)</del>，s不为空返回s。  </p>
+</li>
 <li><p>sorted:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># 1. 正常排序</div><div class="line">&gt;&gt;&gt; sorted([36, 5, -12, 9, -21])</div><div class="line">[-21, -12, 5, 9, 36]</div><div class="line"></div><div class="line"># 2. 依照绝对值排序</div><div class="line">&gt;&gt;&gt; sorted([36, 5, -12, 9, -21], key=abs)</div><div class="line">[5, 9, -12, -21, 36]</div><div class="line"></div><div class="line"># 3. 忽略大小写并反向排序</div><div class="line">&gt;&gt;&gt; sorted([&apos;bob&apos;, &apos;about&apos;, &apos;Zoo&apos;, &apos;Credit&apos;], key=str.lower, reverse=True)</div><div class="line">[&apos;Zoo&apos;, &apos;Credit&apos;, &apos;bob&apos;, &apos;about&apos;]</div></pre></td></tr></table></figure>
 </li>
