@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+    <!-- 
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.3.0 -->
+
+    <!-- Title -->
+    
+    <title>
+        
+            Python基础总结（2） | 
+        
+        Xblydxj&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Meta & Info -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="Xblydxj">
+    <meta name="description" content="Coder">
+    <meta name="keywords" content="Xblydxj&#39;s Blog,Python">
+
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Xblydxj&#39;s Blog">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://xblydxj.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Python基础总结（2） | Xblydxj&#39;s Blog">
+    <meta property="og:description" content="Coder">
+    <meta property="og:article:tag" content="Python"> 
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg.png);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/queue.js"></script>
+
+    <!-- UC Browser Compatible -->
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if(agent.indexOf('ucbrowser')>0) {
+            document.write("<link rel=\"stylesheet\" href=\"/css/uc.css\">");
+            alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+        }
+    </script>
+
+    
+
+    
+
+    <!-- Bing Background -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数"><span class="post-toc-number">1.</span> <span class="post-toc-text">函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块"><span class="post-toc-number">2.</span> <span class="post-toc-text">模块</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向对象"><span class="post-toc-number">3.</span> <span class="post-toc-text">面向对象</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Python基础总结（2）
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Xblydxj</strong>
+        <span>5月 12, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1UlEQVR42u3aW07jQBAF0Ox/07CAyOHeaoNM9/EXSozdp5Cmph6vryOvFzY2NjY2NjY2NvYj2a/4ev+tz0+4+vb9CVfPvATMzoyNjY29NfuHf/ov7rk6ehKINoh5UC7fgo2NjX0AO3nN1f1FSRAkmyS4dYLExsbGxg4OcRWOFvn5TmxsbGzse9l5OPLP85SGjY2Njd02aGYJLD9u/u2f9tKwsbGxH8/Oh6bP+flP59vY2NjYD2a3V7KakwwPVsqe4cmxsbGxN2W36zJJONqSZj1k0duxsbGxN2W3g9jPL549balVlAcLGxsb+wB2W360BcNKw2ilTMLGxsbem52MWtuhb7t8c9d6UL2yg42Njb0FO0kzyeHWw5GPmWclEDY2Nvbe7Dzx3Jui2nuSEggbGxv7ZPZdB703iO3STz3oxcbGxt6Unf+cs+9tUdXtMGxsbOxN2a/4ytNPW6i0DaObB73Y2NjYW7CTX54162cFz8qaTrR8iY2Njb0du/1vfV4MtMuU7WAgfws2Njb2rux8TScvJ9qlnLyp1IYDGxsb+xz2XelnVrS0TaXZHwkbGxt7V/YsScxaS7PSpR0zYGNjY5/Gbhv39671rIx72wBhY2Njn8DOD73Upl/4vF3iwcbGxj6BnQxxV9o9s5JjNhhe2lTCxsbG/ufs2TC1bTatHHp2PzY2NvY57JUG06x9/7nwWElml0/GxsbGPoadH2uWAmcJMj8DNjY2Nnb+uPyTqFT4hQsbGxv7BHZ7tWVJvo7ZptK2tYSNjY29K3uYDEYtofa47YpnnbexsbGxN2K3Sat9cRvWvDlVDDCwsbGxD2Ana5TJtyvjgVmDKSpasLGxsbHjkWoSggSQp6toII2NjY2NnS/HlIPhdgCc34+NjY19GjsvGGYlwUpTqQ0KNjY29mnstnEzawy1I97ZyPlX5tvY2NjYD2afc2FjY2NjY2NjY2M/5voGURa5zKQ45FUAAAAASUVORK5CYII=">
+        </ul>
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Python/">Python</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python基础总结（2）&url=https://xblydxj.github.io//2017/05/12/Python基础总结(2)/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python基础总结（2）&url=https://xblydxj.github.io//2017/05/12/Python基础总结(2)/index.html&via=Xblydxj" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://xblydxj.github.io//2017/05/12/Python基础总结(2)/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://xblydxj.github.io//2017/05/12/Python基础总结(2)/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ol>
+<li><p>高级函数</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y, f)</span>:</span></div><div class="line"><span class="keyword">return</span> f(x) + f(y)</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>add(<span class="number">2</span>, <span class="number">-5</span>, abs);</div><div class="line"><span class="number">7</span></div></pre></td></tr></table></figure>
+<p> 可以将函数abs当做变量传入add函数参与运算。</p>
+<ul>
+<li><p>map:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="keyword">return</span> x * x</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>r = map(f, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(r)</div><div class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(map(str, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]))</div><div class="line">[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>, <span class="string">'6'</span>, <span class="string">'7'</span>, <span class="string">'8'</span>, <span class="string">'9'</span>]</div></pre></td></tr></table></figure>
+<p>作为键值对，以后者的Iterator作为底数进行前者的迭代运算并输出。</p>
+</li>
+<li><p>reduce:</p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></div><div class="line"><span class="meta">... </span>    <span class="keyword">return</span> x * <span class="number">10</span> + y</div><div class="line">...</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>reduce(fn, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</div><div class="line"><span class="number">13579</span></div></pre></td></tr></table></figure>
+<p>  抽取后者的Iterator的前两个元素进行前者的运算并迭代输出。</p>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>- filter:
+
+    <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></div><div class="line">list(filter(is_odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">15</span>]))</div><div class="line"><span class="comment"># 结果: [1, 5, 9, 15]</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_empty</span><span class="params">(s)</span>:</span></div><div class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</div><div class="line">list(filter(not_empty, [<span class="string">'A'</span>, <span class="string">''</span>, <span class="string">'B'</span>, <span class="keyword">None</span>, <span class="string">'C'</span>, <span class="string">'  '</span>]))</div><div class="line"><span class="comment"># 结果: ['A', 'B', 'C']</span></div></pre></td></tr></table></figure>
+
+    第二个判断为s为空则返回s.strip()&lt;del&gt;(去除空格)&lt;/del&gt;，s不为空返回s。
+
+- sorted:
+
+    <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 1. 正常排序</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted([<span class="number">36</span>, <span class="number">5</span>, <span class="number">-12</span>, <span class="number">9</span>, <span class="number">-21</span>])</div><div class="line">[<span class="number">-21</span>, <span class="number">-12</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">36</span>]</div><div class="line"></div><div class="line"><span class="comment"># 2. 依照绝对值排序</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted([<span class="number">36</span>, <span class="number">5</span>, <span class="number">-12</span>, <span class="number">9</span>, <span class="number">-21</span>], key=abs)</div><div class="line">[<span class="number">5</span>, <span class="number">9</span>, <span class="number">-12</span>, <span class="number">-21</span>, <span class="number">36</span>]</div><div class="line"></div><div class="line"><span class="comment"># 3. 忽略大小写并反向排序</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sorted([<span class="string">'bob'</span>, <span class="string">'about'</span>, <span class="string">'Zoo'</span>, <span class="string">'Credit'</span>], key=str.lower, reverse=<span class="keyword">True</span>)</div><div class="line">[<span class="string">'Zoo'</span>, <span class="string">'Credit'</span>, <span class="string">'bob'</span>, <span class="string">'about'</span>]</div></pre></td></tr></table></figure>
+</code></pre><ol>
+<li><p>返回函数</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">lazy_sum</span><span class="params">(*args)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sum</span><span class="params">()</span>:</span></div><div class="line">        ax = <span class="number">0</span></div><div class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> args:</div><div class="line">            ax = ax + n</div><div class="line">        <span class="keyword">return</span> ax</div><div class="line">    <span class="keyword">return</span> sum</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>f = lazy_sum(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>f</div><div class="line">&lt;function lazy_sum.&lt;locals&gt;.sum at <span class="number">0x101c6ed90</span>&gt;</div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>f()</div><div class="line"><span class="number">25</span></div></pre></td></tr></table></figure>
+<p> 当调用lazy_sum时sum函数并不会立即运行，此时的f即是sum函数，调用f()时才开始运行内部，以此实现延时运行的效果。</p>
+</li>
+<li><p>闭包</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">()</span>:</span></div><div class="line">    fs = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">4</span>):</div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">()</span>:</span></div><div class="line">             <span class="keyword">return</span> i*i</div><div class="line">        fs.append(f)</div><div class="line">    <span class="keyword">return</span> fs</div><div class="line"></div><div class="line">f1, f2, f3 = count()</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">()</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(j)</span>:</span></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">()</span>:</span></div><div class="line">            <span class="keyword">return</span> j*j</div><div class="line">        <span class="keyword">return</span> g</div><div class="line">    fs = []</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">4</span>):</div><div class="line">        fs.append(f(i)) <span class="comment"># f(i)立刻被执行，因此i的当前值被传入f()</span></div><div class="line"><span class="keyword">return</span> fs</div></pre></td></tr></table></figure>
+<p> 第一种方式在调用时返回值都为9，因为内部i在第一次被调用之后被作为返回值返回，所以函数并未被清理，i的值依旧为上一次运行结果。而第二种在返回函数的内部单独传入一个临时变量，这个临时变量的作用域止于f函数，并在每一次运行时都重新传入新的j，所以运行结果为1，4，9.闭包原则。</p>
+</li>
+<li><p>匿名函数<br> python的匿名函数即为lambda表达式:</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>list(map(<span class="keyword">lambda</span> x: x * x, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]))</div><div class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>, <span class="number">36</span>, <span class="number">49</span>, <span class="number">64</span>, <span class="number">81</span>]</div></pre></td></tr></table></figure>
+</li>
+<li><p>装饰器</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">def log(text):</div><div class="line">    def decorator(func)</div><div class="line">        def wrapper(*args, **kw):</div><div class="line">            print('%s %s():' % (text, func.__name__))</div><div class="line">            return func(*args, **kw)</div><div class="line">        return wrapper</div><div class="line">    return decorator</div><div class="line"></div><div class="line">@log('execute')</div><div class="line">def now():</div><div class="line">    print('2015-3-25')   </div><div class="line"></div><div class="line">&gt;&gt;&gt; now()</div><div class="line">execute now():</div><div class="line">2015-3-25</div></pre></td></tr></table></figure>
+<p> 定义log函数，对now函数进行标记。运行时也同时运行log方法。相当于运行了<br> <code>now = log(&#39;execute&#39;)(now)</code></p>
+</li>
+</ol>
+<pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#最后写法</span></div><div class="line"><span class="comment">#1. 带参数</span></div><div class="line"><span class="keyword">import</span> functools</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(text)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></div><div class="line"><span class="meta">        @functools.wraps(func)</span></div><div class="line">        <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></div><div class="line">            print(<span class="string">'%s %s():'</span> % (text, func.__name__))</div><div class="line">            <span class="keyword">return</span> func(*args, **kw)</div><div class="line">        <span class="keyword">return</span> wrapper</div><div class="line">    <span class="keyword">return</span> decorator</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#2. 不带参数</span></div><div class="line"><span class="keyword">import</span> functools</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></div><div class="line"><span class="meta">    @functools.wraps(func)</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kw)</span>:</span></div><div class="line">        print(<span class="string">'call %s():'</span> % func.__name__)</div><div class="line">        <span class="keyword">return</span> func(*args, **kw)</div><div class="line">    <span class="keyword">return</span> wrapper</div></pre></td></tr></table></figure>
+</code></pre><ol>
+<li><p>偏函数</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">max2 = functools.partial(max, <span class="number">10</span>)</div><div class="line"></div><div class="line">int2 = functools.partial(int, base=<span class="number">2</span>)</div></pre></td></tr></table></figure>
+<p> 偏函数的作用：固定一些参数，简化需要传入的参数数量。<br> 此时<code>int2(&#39;10010&#39;)</code>相当于</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">kw = &#123; <span class="string">'base'</span>: <span class="number">2</span> &#125;</div><div class="line">int(<span class="string">'10010'</span>, **kw)</div></pre></td></tr></table></figure>
+<p> 以及<code>max2(5,6,7)</code>相当于</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">args = (<span class="number">10</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>)</div><div class="line">max(*args)</div><div class="line"><span class="comment">#结果为10</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><ol>
+<li><p>使用:<br> 栗：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python3</span></div><div class="line"><span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"></div><div class="line"><span class="comment"># 1. 文档注释，所有模块代码的第一个字符串都被视为文档注释</span></div><div class="line"><span class="string">' a test module '</span></div><div class="line"></div><div class="line"><span class="comment"># 2. 标记作者（廖雪峰）</span></div><div class="line">__author__ = <span class="string">'Michael Liao'</span></div><div class="line"></div><div class="line"><span class="comment"># 3. 导入内建的sys模块，sys模块有一个argv变量，用list存储了命令行的所有参数，其第一个参数永远是模块的文件名</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">()</span>:</span></div><div class="line">    args = sys.argv</div><div class="line">    <span class="keyword">if</span> len(args)==<span class="number">1</span>:</div><div class="line">        print(<span class="string">'Hello, world!'</span>)</div><div class="line">    <span class="keyword">elif</span> len(args)==<span class="number">2</span>:</div><div class="line">        print(<span class="string">'Hello, %s!'</span> % args[<span class="number">1</span>])</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        print(<span class="string">'Too many arguments!'</span>)</div><div class="line"></div><div class="line"><span class="comment"># 4. 标记作用域</span></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</div><div class="line">    test()</div><div class="line"></div><div class="line"><span class="comment"># 5. 结果</span></div><div class="line">$ python hello.py Michael</div><div class="line">Hello, Michael!</div></pre></td></tr></table></figure>
+</li>
+<li><p>第三方模块</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成图片的缩略图</span></div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line">im = Image.open(<span class="string">'test.png'</span>)</div><div class="line">print(im.format, im.size, im.mode)</div><div class="line">im.thumbnail((<span class="number">200</span>,<span class="number">100</span>))</div><div class="line">im.save(<span class="string">'thumb.jpg'</span>, <span class="string">'JPEG'</span>)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><pre><code>&gt; Object Oriented Programing(OOP)面向对象编程
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, score)</span>:</span></div><div class="line">        self.name = name</div><div class="line">        self.score = score</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_score</span><span class="params">(self)</span>:</span></div><div class="line">        print(<span class="string">'%s: %s'</span> % (self.name, self.score))</div></pre></td></tr></table></figure>
+
+类比于java，__init__函数相当于构造函数，self代表自身，必须传的参数。当定义了__init__方法之后，创建其实例时需要将对应的参数也传入。
+</code></pre><ol>
+<li><p>成员变量私有化</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,score)</span>:</span></div><div class="line">    self.__name = name</div><div class="line">    self.__score = score</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p>待续</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+    <!-- 使用 DISQUS_CLICK -->
+    <div id="disqus-comment">	
+        <div id="disqus_thread"></div>
+<!-- include js -->
+<script src="/js/ripple.js"></script>
+
+<!-- add animation -->
+<style>
+        .ripple-container {
+        }
+        .ripple-container .ripple{
+            background-color: rgba(255,255,255,0.4);
+            animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            80% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+		.disqus_click_btn {
+            background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer
+        }
+</style>
+	
+<!-- add data-ripple attribute -->
+<div class="btn_click_load"> 
+    <button class="disqus_click_btn" data-ripple>阅读评论 「请确保 disq.us &amp; disquscdn.com &amp; disqus.com 可以正常加载」</button>
+</div>
+	
+<script>
+    // add effect to elements
+    Array.prototype.forEach.call(document.querySelectorAll('[data-ripple]'), function(element){
+        // find all elements and attach effect
+        new RippleEffect(element); // element is instance of javascript element node
+    });
+</script>
+
+<script>
+    $('.btn_click_load').click(function() {  //click to load comments
+        var disqus_config = function () {
+            this.page.url = 'https://xblydxj.github.io/2017/05/12/Python基础总结(2)/index.html';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//xblydxj.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+  	
+
+    </div>
+    <style>
+        #disqus-comment{
+            background-color: #eee;
+            padding: 2pc;
+        }
+    </style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/04/24/Python基础总结(1)/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="Xblydxj's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        xblydxj@gmail.com &amp; 463212377@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: 463212377@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/" target="_self">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script> -->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-twitter.png);">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://www.github.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-zhihu.png);">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://www.bilibili.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-bilibili.png);">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;
+            <script type="text/javascript">
+                var fd = new Date();
+                document.write(fd.getFullYear());
+            </script>
+            &nbsp;Xblydxj's Blog
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    <script src="/js/smoothscroll.js"></script>
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+
+                </main>
+            </div>
+        </body>
+    
+</html>
