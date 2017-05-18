@@ -7,7 +7,20 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
-
+<script>
+  //获取元素
+  var oDownPage = document.getElementById('canvas');
+  var oTopPage = document.getElementById('top');
+  //当浏览器滚动时
+  document.onscroll = function(){
+    //浏览器滚动的距离
+    var scroll_top = document.body.scrollTop;
+    //计算背景高度与前景高度的比例
+    var num = oDownPage.offsetHeight / oTopPage.offsetHeight;
+    //设置背景层滚动的速度
+    oDownPage.style.marginTop = -scroll_top * num + 'px';
+  }
+</script>
 
 <head>
   <meta charset="UTF-8"/>
@@ -99,16 +112,16 @@
 
 
 
-<meta name="description" content="一身滑稽，自得其乐">
+<meta name="description" content="xblydxj是西伯利亚的雪景的简写，也是这首歌的歌词。这是司夏的版本，也是第一次听的版本，印象深刻，就用其中一句作为昵称，用挺久了，以后有机会要去西伯利亚看雪，希望不止一个人~">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
+<meta property="og:title" content="关于我~">
 <meta property="og:url" content="https://xblydxj.github.io/about/index.html">
 <meta property="og:site_name" content="Xblydxj's Blog">
-<meta property="og:description" content="一身滑稽，自得其乐">
-<meta property="og:updated_time" content="2017-05-17T08:24:21.000Z">
+<meta property="og:description" content="xblydxj是西伯利亚的雪景的简写，也是这首歌的歌词。这是司夏的版本，也是第一次听的版本，印象深刻，就用其中一句作为昵称，用挺久了，以后有机会要去西伯利亚看雪，希望不止一个人~">
+<meta property="og:updated_time" content="2017-05-18T08:09:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="一身滑稽，自得其乐">
+<meta name="twitter:title" content="关于我~">
+<meta name="twitter:description" content="xblydxj是西伯利亚的雪景的简写，也是这首歌的歌词。这是司夏的版本，也是第一次听的版本，印象深刻，就用其中一句作为昵称，用挺久了，以后有机会要去西伯利亚看雪，希望不止一个人~">
 
 
 
@@ -142,7 +155,7 @@
 
 
 
-  <title>about | Xblydxj's Blog</title>
+  <title>关于我~ | Xblydxj's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -318,7 +331,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div id="top" class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -469,7 +482,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
+	<h1 class="post-title" itemprop="name headline">关于我~</h1>
 
 
 
@@ -477,7 +490,10 @@
 
     
     
-      
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="420" height="86" src="//music.163.com/outchain/player?type=2&id=466180639&auto=1&height=66"></iframe>
+
+<p>xblydxj是西伯利亚的雪景的简写，也是这首歌的歌词。<br>这是司夏的版本，也是第一次听的版本，印象深刻，就用其中一句作为昵称，用挺久了，以后有机会要去西伯利亚看雪，希望不止一个人~</p>
+
     
   </div>
 
@@ -747,7 +763,7 @@
         var disqus_config = function () {
           this.page.url = 'https://xblydxj.github.io/about/index.html';
           this.page.identifier = 'about/index.html';
-          this.page.title = 'about';
+          this.page.title = '关于我~';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://xblydxj.disqus.com/embed.js';
