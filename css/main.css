@@ -1114,20 +1114,20 @@ pre .javascript .function {
   color: #fafafa !important;
 }
 .post-picture {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -20px;
+  margin-right: -20px;
   border-radius: 10px;
   margin-top: -60px;
   z-index: 30;
-  height: 200px;
+  height: 280px;
   display: flex;
   box-sizing: border-box;
   background-size: cover;
   cursor: pointer;
   flex-grow: 1;
   flex-direction: row;
-  -webkit-box-shadow: 0 1px 12px #c8c8c8;
-  -moz-box-shadow: 0 1px 8px #dedfdf;
+  -webkit-box-shadow: 0 2px 12px #c8c8c8;
+  -moz-box-shadow: 0 2px 8px #dedfdf;
 }
 .post-sticky-flag {
   display: inline-block;
@@ -1328,10 +1328,10 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
-  font-size: 26px;
+  font-size: 32px;
   text-align: center;
   word-break: break-word;
-  font-weight: 400;
+  font-weight: 600;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
@@ -1341,10 +1341,11 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: #fff;
   border-bottom: none;
+  margin: 30px 30px 30px 30px;
   line-height: 1.2;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 .posts-expand .post-title-link::before {
   content: "";
@@ -1353,7 +1354,7 @@ pre .javascript .function {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #fff;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -1373,13 +1374,13 @@ pre .javascript .function {
   transform: scaleX(1);
 }
 .posts-expand .post-title-link .fa {
-  font-size: 16px;
+  font-size: 24px;
 }
 .posts-expand .post-meta {
-  margin: 3px 0 60px 0;
+  margin: 10px 0 60px 0;
   color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 .posts-expand .post-meta .post-category-list {
@@ -1391,8 +1392,8 @@ pre .javascript .function {
   color: #999;
 }
 .posts-expand .post-meta .post-description {
-  font-size: 14px;
-  margin-top: 2px;
+  font-size: 16px;
+  margin-top: 0;
 }
 .post-wordcount {
   display: inline-block;
@@ -1715,7 +1716,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #66d7ff;
+  background: #c33c79;
 }
 .links-of-blogroll {
   font-size: 13px;
