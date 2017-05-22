@@ -1103,7 +1103,7 @@ pre .javascript .function {
 }
 .post-body .image-caption,
 .post-body .figure .caption {
-  margin: 0px auto 15px;
+  margin: 0 auto 15px;
   text-align: center;
   font-size: 14px;
   color: #999;
@@ -1138,6 +1138,14 @@ pre .javascript .function {
   -ms-transform: rotate(30deg);
   -o-transform: rotate(30deg);
   transform: rotate(30deg);
+}
+.my_icon {
+  font-family: "my_icon" !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
 }
 .posts-expand {
   padding-top: 40px;
@@ -1539,7 +1547,7 @@ pre .javascript .function {
 .post-gallery {
   display: table;
   table-layout: fixed;
-  width: 100%;
+  width: 90%;
   border-collapse: separate;
 }
 .post-gallery-row {
@@ -1552,7 +1560,7 @@ pre .javascript .function {
   border: none;
 }
 .post-gallery .post-gallery-img img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 100%;
   border: none;
 }
@@ -1717,7 +1725,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #faff21;
+  background: #a2dee5;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2599,4 +2607,9 @@ body {
 }
 .header {
   background: transparent;
+}
+@font-face {
+  font-family: 'my_icon'; /* project id 308730 */
+  src: url("//at.alicdn.com/t/font_cc90by0t6c8wu3di.eot");
+  src: url("//at.alicdn.com/t/font_cc90by0t6c8wu3di.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_cc90by0t6c8wu3di.woff") format('woff'), url("//at.alicdn.com/t/font_cc90by0t6c8wu3di.ttf") format('truetype'), url("//at.alicdn.com/t/font_cc90by0t6c8wu3di.svg#iconfont") format('svg');
 }
