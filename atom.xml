@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xblydxj.github.io/"/>
-  <updated>2017-05-17T10:09:22.000Z</updated>
+  <updated>2017-05-24T10:20:02.000Z</updated>
   <id>https://xblydxj.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【video】Endless road</title>
+    <link href="https://xblydxj.github.io/2017/05/24/%5Bvideo%5DEndless%20road/"/>
+    <id>https://xblydxj.github.io/2017/05/24/[video]Endless road/</id>
+    <published>2017-05-23T20:48:00.000Z</published>
+    <updated>2017-05-24T10:20:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="【video】Endless-road"><a href="#【video】Endless-road" class="headerlink" title="【video】Endless road"></a>【video】Endless road</h1><a id="more"></a>
+<iframe height="498" width="100%" src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=8d35ec51b4d942e9072950f6d25cde2a&tvId=238982400&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0"></iframe>
+
+<p>随意的浏览网易云，看见这样一个短视频。嗯，有触动。<del>我眼睛进沙子了。</del></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;【video】Endless-road&quot;&gt;&lt;a href=&quot;#【video】Endless-road&quot; class=&quot;headerlink&quot; title=&quot;【video】Endless road&quot;&gt;&lt;/a&gt;【video】Endless road&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="https://xblydxj.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Live" scheme="https://xblydxj.github.io/tags/Live/"/>
+    
+      <category term="Video" scheme="https://xblydxj.github.io/tags/Video/"/>
+    
+  </entry>
   
   <entry>
     <title>Python基础总结（2）</title>
@@ -122,6 +150,7 @@
 <li><p>解释器</p>
 <blockquote>
 <p>python运行需要解释器，类似java的编译器，python有各类支持的解释器。</p>
+</blockquote>
 <ul>
 <li>CPython：由C语言开发的解释器，安装python3时也已直接获得，是使用最广泛的解释器。</li>
 <li>IPython：比CPython多了一些交互。</li>
@@ -130,7 +159,6 @@
 <li>。。。</li>
 <li>还是用CPython吧</li>
 </ul>
-</blockquote>
 </li>
 </ol>
 <h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ol>
@@ -270,7 +298,7 @@
     <link href="https://xblydxj.github.io/2017/04/17/%E8%BF%87%E5%8E%BB%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5/"/>
     <id>https://xblydxj.github.io/2017/04/17/过去文章链接/</id>
     <published>2017-04-17T02:36:03.000Z</published>
-    <updated>2017-05-22T09:07:13.000Z</updated>
+    <updated>2017-05-24T10:18:35.000Z</updated>
     
     <content type="html"><![CDATA[<p>以前在csdn上写过一些基础，用于复习整理。在这里新开博客就开个链接。</p>
 <a id="more"></a>
