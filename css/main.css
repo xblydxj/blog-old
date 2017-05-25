@@ -1340,24 +1340,26 @@ pre .javascript .function {
   text-align: bottom;
   word-break: break-word;
   vertical-align: bottom;
+  padding-left: 20px;
   font-weight: 600;
   color: #fff;
-  padding-top: 170px;
-  padding-left: 50px;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
     font-size: 22px;
   }
 }
+.post-link {
+  height: 100%;
+  width: 100%;
+}
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
   color: #fff;
-  height: 100%;
-  width: 100%;
   border-bottom: none;
-  line-height: 1.2;
+  text-align: bottom;
+  line-height: 150px;
   vertical-align: bottom;
 }
 .posts-expand .post-title-link::before {
@@ -1735,7 +1737,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b61bbd;
+  background: #42ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
