@@ -1341,6 +1341,8 @@ pre .javascript .function {
   word-break: break-word;
   vertical-align: bottom;
   padding-left: 20px;
+  height: 100%;
+  width: 100%;
   font-weight: 600;
   color: #fff;
 }
@@ -1359,7 +1361,6 @@ pre .javascript .function {
   color: #fff;
   border-bottom: none;
   text-align: bottom;
-  line-height: 150px;
   vertical-align: bottom;
 }
 .posts-expand .post-title-link::before {
@@ -1737,7 +1738,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #42ffff;
+  background: #7c3e7d;
 }
 .links-of-blogroll {
   font-size: 13px;
