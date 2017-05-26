@@ -1433,6 +1433,9 @@ pre .javascript .function {
     display: inline-block;
   }
 }
+.post-meta-item-text {
+  color: #333;
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .post-meta-item-text {
     display: none;
@@ -1738,7 +1741,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8eb60f;
+  background: #d0ffd2;
 }
 .links-of-blogroll {
   font-size: 13px;
