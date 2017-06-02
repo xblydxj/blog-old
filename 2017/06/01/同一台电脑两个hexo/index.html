@@ -122,7 +122,7 @@
 <meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/7-github-3.png">
 <meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/7-github-4.png">
 <meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/7-github-5.png">
-<meta property="og:updated_time" content="2017-06-02T05:55:16.000Z">
+<meta property="og:updated_time" content="2017-06-02T05:57:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="同一台电脑两个github账户">
 <meta name="twitter:description" content="经常怀疑产品经理的脑洞，但是真碰见这样的需求的时候我也很绝望~同一台电脑两个hexo，其实主题应该是这个。">
@@ -634,12 +634,10 @@
 </li>
 <li><p><strong>多账号配置：</strong><br> 在<code>~/.ssh</code>文件夹先新建一个config文件</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#A账号</div><div class="line">Host github.com_a</div><div class="line">  HostName github.com</div><div class="line">  IdentityFile ~/.ssh/id_rsa_a</div><div class="line"></div><div class="line">#B账号</div><div class="line">Host github.com_b</div><div class="line">  HostName github.com</div><div class="line">  IdentityFile ~/.ssh/id_rsa_b</div></pre></td></tr></table></figure>
+<p> 下一次的push可以这样，就是用A账号提交。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin git@github.com_a:xxx/xxx.git</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+<p> 同理改为github.com_b就是用B账号提交。</p>
 </li>
-</ol>
-<p>下一次的push可以这样，就是用A账号提交。</p>
-<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin git@github.com_a:xxx/xxx.git</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
-</code></pre><p>同理改为github.com_b就是用B账号提交。</p>
-<ol>
 <li><p><strong>使用git上传代码</strong><br> github.io创建仓库时前缀需要与用户名相同，所以不能再同一个账户下搭建两个io博客。所以只能新注册一个b账号。<br> 在这之前，我们分别在两个文件夹下已经搭建好了hexo博客。然后<code>hexo d</code>时：<br> <code>ERROR Deployer not found:git</code>报错了。<del>有人知道的话求告知</del><br>修改了对应的账号也还是不行。所以两个账号都用hexo d来上传代码我已经放弃了= =。<br>既然这样，上面的配置就起作用了！两个博客时只有一个账号的可以使用hexo d，另一个账号直接在hexo g之后进入public文件夹，使用git，push到对应的仓库即可。效果是一样的：</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ cd public</div><div class="line">$ git init</div><div class="line">$ git add .</div><div class="line">$ git commit -m &quot;first commit&quot;</div><div class="line">$ git remote add origin git@github.com_b:yyy/yyy.github.io.git</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
 <p> 这里使用了B账号对应的hostname，这样即是使用b账号的密钥进行git。下一次再进行操作时候只需要:</p>
