@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xblydxj.github.io/"/>
-  <updated>2017-06-01T08:40:05.000Z</updated>
+  <updated>2017-06-02T05:42:42.000Z</updated>
   <id>https://xblydxj.github.io/</id>
   
   <author>
@@ -14,6 +14,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>同一台电脑两个github账户，同一个github账户两台电脑</title>
+    <link href="https://xblydxj.github.io/2017/06/01/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%A4%E4%B8%AAhexo/"/>
+    <id>https://xblydxj.github.io/2017/06/01/同一台电脑两个hexo/</id>
+    <published>2017-06-01T10:21:43.000Z</published>
+    <updated>2017-06-02T05:42:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>经常怀疑产品经理的脑洞，但是真碰见这样的需求的时候我也很绝望~<br>同一台电脑两个hexo，同一个hexo两台电脑维护，其实主题应该是这个。<br><a id="more"></a></p>
+<h3 id="同一台电脑两个github账户"><a href="#同一台电脑两个github账户" class="headerlink" title="同一台电脑两个github账户"></a>同一台电脑两个github账户</h3><blockquote>
+<p>这样的需求我也是不知所措，略过那些需求来源。</p>
+</blockquote>
+<p>我想要在同一台电脑上部署两个hexo的博客，但是github的{username}.github.io这样的格式定死了只能一个账户适配一个博客。不过mac上的终端第一次用git的时候也已经把账户信息记录在了<code>~\.gitconfig</code>下的</p>
+<p><img src="media/14963125035316/7-github-2.png" alt="7-github-2"></p>
+<p>显示隐藏文件：<code>defaults write com.apple.finder AppleShowAllFiles -bool true</code>,终端输入之后可以看到隐藏文件。<br>这是我们第一次记录的github账号以及账号对应的邮箱。修改方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config user.name&quot;username&quot;</div><div class="line">git config user.email&quot;xxx@xx.com&quot;</div></pre></td></tr></table></figure>
+<ol>
+<li><p><strong>生成ssh密钥：</strong><br> 假设：<br> A账号的邮箱是：xxx@xx.com<br> B账号的邮箱是：yyy@yy.com<br> 那么首先分别为他们生成对应的ssh密钥并命名保存：<br> <code>$ ssh-keygen -t rsa -C &quot;xxx@xx.com&quot;</code><br> <img src="media/14963125035316/7-github-3.png" alt="7-github-3"><br>输入：<code>/Users/{yourname}/.ssh/id_rsa_a</code>之后连按三个回车，保存A的密钥。<br> B同理：<br> <code>$ ssh-keygen -t rsa -C &quot;yyy@yy.com&quot;</code><br> <img src="media/14963125035316/7-github-4.png" alt="7-github-4"><br>输入：<code>/Users/{yourname}/.ssh/id_rsa_b</code>之后连按三个回车，保存B的密钥。</p>
+</li>
+<li><p><strong>保存至github的账户：</strong></p>
+<ul>
+<li><p>复制A账号需要的公钥：<code>pbcopy &lt; ~/.ssh/id_rsa_a.pub</code><br><a href="https://github.com/settings/keys" target="_blank" rel="external">添加ssh公钥</a><del>得先登录A账号</del><br><img src="media/14963125035316/7-github-5.png" alt="7-github-5"><br>最后马赛克是xxx@xx.com，就是当前登录的账号对应的邮箱。然后Add。</p>
+<ul>
+<li>复制B账号需要的公钥：<code>pbcopy &lt; ~/.ssh/id_rsa_b.pub</code><br>登出A账号，登录B账号，同样的页面，添加ssh公钥，将复制的b密钥粘贴保存进去。邮箱与b账号注册的保存的邮箱相同。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>多账号配置：</strong><br> 在<code>~/.ssh</code>文件夹先新建一个config文件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">#A账号</div><div class="line">Host github.com_a</div><div class="line">  HostName github.com</div><div class="line">  IdentityFile ~/.ssh/id_rsa_a</div><div class="line"></div><div class="line">#B账号</div><div class="line">Host github.com_b</div><div class="line">  HostName github.com</div><div class="line">  IdentityFile ~/.ssh/id_rsa_b</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>下一次的push可以这样，就是用A账号提交。</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin git@github.com_a:xxx/xxx.git</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+</code></pre><p>同理改为github.com_b就是用B账号提交。</p>
+<ol>
+<li><p><strong>使用git上传代码</strong><br> github.io创建仓库时前缀需要与用户名相同，所以不能再同一个账户下搭建两个io博客。所以只能新注册一个b账号。<br> 在这之前，我们分别在两个文件夹下已经搭建好了hexo博客。然后<code>hexo d</code>时：<br> <code>ERROR Deployer not found:git</code>报错了。<del>有人知道的话求告知</del><br>修改了对应的账号也还是不行。所以两个账号都用hexo d来上传代码我已经放弃了= =。<br>既然这样，上面的配置就起作用了！两个博客时只有一个账号的可以使用hexo d，另一个账号直接在hexo g之后进入public文件夹，使用git，push到对应的仓库即可。效果是一样的：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ cd public</div><div class="line">$ git init</div><div class="line">$ git add .</div><div class="line">$ git commit -m &quot;first commit&quot;</div><div class="line">$ git remote add origin git@github.com_b:yyy/yyy.github.io.git</div><div class="line">$ git push origin master</div></pre></td></tr></table></figure>
+<p> 这里使用了B账号对应的hostname，这样即是使用b账号的密钥进行git。下一次再进行操作时候只需要:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;next commit&quot;</div><div class="line">git push</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h3 id="同一个hexo两台电脑更新维护"><a href="#同一个hexo两台电脑更新维护" class="headerlink" title="同一个hexo两台电脑更新维护"></a>同一个hexo两台电脑更新维护</h3><blockquote>
+<p>hexo的文件目录下有一个.gitgnore文件，他做的事就是忽略了除了public文件夹以外的所有文件，hexo g命令是将原内容编译之后生成了网页数据就在public里保存，在网页上显示的内容也只需要public里的内容。hexo d为我们过滤了这些。<br>不过为了备份所有的内容，一遍在这些原始文件丢失的情况下还能找回，我们也需要把hexo下的所有文件都保存。</p>
+</blockquote>
+<ol>
+<li><p>新建分支,并设置为默认：<br> 项目中，我们public的代码是上传到master分支的。新建一个hexo分支用于保存原始文件。<br><img src="media/14963125035316/7-github-6.png" alt="7-github-6"><br>再将hexo分支设置为默认分支：<br><img src="media/14963125035316/7-github-7.png" alt="7-github-7"></p>
+</li>
+<li><p>本地保存<br>新建文件夹重新克隆代码<br><code>git clone https://github.com/xxx/xxx.github.io.git</code><br>那么当前克隆下来的就是属于hexo分支的了。</p>
+</li>
+</ol>
+<hr>
+<h3 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h3><p>有时候会遇上这个问题，在hexo g的时候：<br><code>Error: Cannot find module &#39;./build/Release/DTraceProviderBindings&#39;</code><br>只需要<br><code>$ npm install hexo --no-optional</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经常怀疑产品经理的脑洞，但是真碰见这样的需求的时候我也很绝望~&lt;br&gt;同一台电脑两个hexo，同一个hexo两台电脑维护，其实主题应该是这个。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="正经" scheme="https://xblydxj.github.io/categories/%E6%AD%A3%E7%BB%8F/"/>
+    
+    
+      <category term="Blog" scheme="https://xblydxj.github.io/tags/Blog/"/>
+    
+      <category term="干货" scheme="https://xblydxj.github.io/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>沉迷国漫，无法自拔</title>
