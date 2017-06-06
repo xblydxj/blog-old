@@ -26,7 +26,7 @@
 <a id="more"></a>
 <ol>
 <li><p>and和or语法相关<br> 在不加括号的前提下and的优先级大于or<br> <code>1 or 4 and 5</code>此例子运算时先进行and的运算再进行or的运算。</p>
-<p> Operation | Result<br> ———–|——–<br>x or y |if x is false, then y, else x<br>x and y |if x is false, then x, else y<br>not x |if x is false, then true, else false</p>
+<p> Operation| Result<br> ———|——–<br>x or y     |if x is false, then y, else x<br>x and y     |if x is false, then x, else y<br>not x     |if x is false, then true, else false</p>
 <blockquote>
 <p>or运算即是，前者为真即前者，前者为假即是后者。<br>and运算即为，前者为假即前者，前者为真即后者。<br>or和and的运算结果相反。</p>
 </blockquote>
