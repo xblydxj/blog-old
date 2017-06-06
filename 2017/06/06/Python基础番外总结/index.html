@@ -609,37 +609,47 @@
       
         <p>一些学习过程中收集的小tip~</p>
 <a id="more"></a>
-<ol>
-<li><p>and和or语法相关<br> 在不加括号的前提下and的优先级大于or<br> <code>1 or 4 and 5</code>此例子运算时先进行and的运算再进行or的运算。</p>
-<p> Operation| Result<br> ———|——–<br>x or y     |if x is false, then y, else x<br>x and y     |if x is false, then x, else y<br>not x     |if x is false, then true, else false</p>
+<h4 id="1-and和or语法相关"><a href="#1-and和or语法相关" class="headerlink" title="1. and和or语法相关"></a>1. and和or语法相关</h4><p>  在不加括号的前提下and的优先级大于or<br>  <code>1 or 4 and 5</code>此例子运算时先进行and的运算再进行or的运算。</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th style="text-align:left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x or y</td>
+<td style="text-align:left">if x is false, then y, else x</td>
+</tr>
+<tr>
+<td>x and y</td>
+<td style="text-align:left">if x is false, then x, else y</td>
+</tr>
+<tr>
+<td>not x</td>
+<td style="text-align:left">if x is false, then true, else false</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>or运算即是，前者为真即前者，前者为假即是后者。<br>and运算即为，前者为假即前者，前者为真即后者。<br>or和and的运算结果相反。</p>
 </blockquote>
-</li>
-<li><p>python中所有的空</p>
-<ul>
+<h4 id="2-python中所有的空"><a href="#2-python中所有的空" class="headerlink" title="2. python中所有的空"></a>2. python中所有的空</h4><ul>
 <li>None</li>
 <li>False</li>
 <li>0,以及所有表示0的数字类型。如0，0.0，0L</li>
 <li>空集合。dict，tuple，list，dict，set。。。</li>
 </ul>
-</li>
-<li><p>lambda（匿名函数）<br> 栗子：<code>lambda x: x % n &gt; 0</code><br> python中的lambda是简化函数，上栗中可以写为</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function li(x):</div><div class="line">    <span class="keyword">return</span> x % n &gt; <span class="number">0</span></div></pre></td></tr></table></figure>
-<p> 此间的n是上式中传下来的数据。</p>
-</li>
-<li><p>作用域</p>
-<p> Python中以<code>_</code>前缀来实现量的私有。大部分正常命名，类似<code>abc,xyz,PI</code>等默认public类型。而以<code>_</code>开头的命名默认为private，无法被直接引用，或者说不应该被直接引用，而<code>__name__,__author__,__doc__</code>则都是特殊变量，能够被直接引用，但都有各自的特殊用途。<br> 栗子：</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_1</span><span class="params">(name)</span>:</span></div><div class="line"><span class="keyword">return</span> <span class="string">'Hello, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_2</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">return</span> <span class="string">'Hi, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greeting</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(name) &gt; <span class="number">3</span>:</div><div class="line">        <span class="keyword">return</span> _private_1(name)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> _private_2(name)</div></pre></td></tr></table></figure>
-</li>
-<li><p>动态语言与静态语言<br> java属于静态语言,python是静态语言，如下同样意义的方法，java限定了传入的参数只能为Animal或者Animal的子类的对象才能运行，而动态语言的python只需要传入有run方法的对象即可。<del>动态语言的<strong>鸭子类型</strong></del></p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toRun</span><span class="params">(Animal animal)</span></span>&#123;</div><div class="line">  animal.run();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">toRun</span><span class="params">(Animal animal)</span>:</span></div><div class="line">  animal.run()</div></pre></td></tr></table></figure>
-</li>
-<li><p>常用三方库</p>
-<p> 。。。待收集~~</p>
-</li>
-</ol>
+<h4 id="3-lambda（匿名函数）"><a href="#3-lambda（匿名函数）" class="headerlink" title="3. lambda（匿名函数）"></a>3. lambda（匿名函数）</h4><p>栗子：<code>lambda x: x % n &gt; 0</code><br>python中的lambda是简化函数，上栗中可以写为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function li(x):</div><div class="line">    <span class="keyword">return</span> x % n &gt; <span class="number">0</span></div></pre></td></tr></table></figure>
+<p>此间的n是上式中传下来的数据。</p>
+<h4 id="4-作用域"><a href="#4-作用域" class="headerlink" title="4. 作用域"></a>4. 作用域</h4><p>Python中以<code>_</code>前缀来实现量的私有。大部分正常命名，类似<code>abc,xyz,PI</code>等默认public类型。而以<code>_</code>开头的命名默认为private，无法被直接引用，或者说不应该被直接引用，而<code>__name__,__author__,__doc__</code>则都是特殊变量，能够被直接引用，但都有各自的特殊用途。<br>栗子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_1</span><span class="params">(name)</span>:</span></div><div class="line"><span class="keyword">return</span> <span class="string">'Hello, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_2</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">return</span> <span class="string">'Hi, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greeting</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(name) &gt; <span class="number">3</span>:</div><div class="line">        <span class="keyword">return</span> _private_1(name)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> _private_2(name)</div></pre></td></tr></table></figure>
+<h4 id="5-动态语言与静态语言"><a href="#5-动态语言与静态语言" class="headerlink" title="5. 动态语言与静态语言"></a>5. 动态语言与静态语言</h4><p>java属于静态语言,python是静态语言，如下同样意义的方法，java限定了传入的参数只能为Animal或者Animal的子类的对象才能运行，而动态语言的python只需要传入有run方法的对象即可。<del>动态语言的<strong>鸭子类型</strong></del></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toRun</span><span class="params">(Animal animal)</span></span>&#123;</div><div class="line">  animal.run();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">toRun</span><span class="params">(Animal animal)</span>:</span></div><div class="line">  animal.run()</div></pre></td></tr></table></figure>
+<h4 id="6-常用三方库"><a href="#6-常用三方库" class="headerlink" title="6. 常用三方库"></a>6. 常用三方库</h4><p>。。。待收集~~</p>
 
       
     </div>
@@ -744,8 +754,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -843,6 +862,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-and和or语法相关"><span class="nav-number">1.</span> <span class="nav-text">1. and和or语法相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-python中所有的空"><span class="nav-number">2.</span> <span class="nav-text">2. python中所有的空</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-lambda（匿名函数）"><span class="nav-number">3.</span> <span class="nav-text">3. lambda（匿名函数）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-作用域"><span class="nav-number">4.</span> <span class="nav-text">4. 作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-动态语言与静态语言"><span class="nav-number">5.</span> <span class="nav-text">5. 动态语言与静态语言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-常用三方库"><span class="nav-number">6.</span> <span class="nav-text">6. 常用三方库</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
