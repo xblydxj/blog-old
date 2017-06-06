@@ -504,7 +504,7 @@
       <header class="post-header" xlink:href="/2017/06/06/Python基础番外总结/">
         
         
-          <div class="post-picture" style="background-image: url(http://oni7r1rj8.bkt.clouddn.com/python.png)" itemprop="url">
+          <div class="post-picture" style="background-image: url(http://oni7r1rj8.bkt.clouddn.com/9-python-1.png)" itemprop="url">
             <h2 style="color:#ffffff" class="post-title"
                                                        itemprop="name headline">Python基础总结番外</h2>
           </div>
@@ -631,6 +631,10 @@
 <li><p>作用域</p>
 <p> Python中以<code>_</code>前缀来实现量的私有。大部分正常命名，类似<code>abc,xyz,PI</code>等默认public类型。而以<code>_</code>开头的命名默认为private，无法被直接引用，或者说不应该被直接引用，而<code>__name__,__author__,__doc__</code>则都是特殊变量，能够被直接引用，但都有各自的特殊用途。<br> 栗子：</p>
  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_1</span><span class="params">(name)</span>:</span></div><div class="line"><span class="keyword">return</span> <span class="string">'Hello, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_2</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">return</span> <span class="string">'Hi, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greeting</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(name) &gt; <span class="number">3</span>:</div><div class="line">        <span class="keyword">return</span> _private_1(name)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> _private_2(name)</div></pre></td></tr></table></figure>
+</li>
+<li><p>动态语言与静态语言<br> java属于静态语言,python是静态语言，如下同样意义的方法，java限定了传入的参数只能为Animal或者Animal的子类的对象才能运行，而动态语言的python只需要传入有run方法的对象即可。<del>动态语言的<strong>鸭子类型</strong></del></p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toRun</span><span class="params">(Animal animal)</span></span>&#123;</div><div class="line">  animal.run();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">toRun</span><span class="params">(Animal animal)</span>:</span></div><div class="line">  animal.run()</div></pre></td></tr></table></figure>
 </li>
 <li><p>常用三方库</p>
 <p> 。。。待收集~~</p>
