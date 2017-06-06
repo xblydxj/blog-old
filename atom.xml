@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://xblydxj.github.io/"/>
-  <updated>2017-06-02T05:57:34.000Z</updated>
-  <id>https://xblydxj.github.io/</id>
+  <link href="https://xblydxj.xyz/"/>
+  <updated>2017-06-06T10:09:22.000Z</updated>
+  <id>https://xblydxj.xyz/</id>
   
   <author>
     <name>Xblydxj</name>
@@ -16,9 +16,97 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python基础总结番外</title>
+    <link href="https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/"/>
+    <id>https://xblydxj.xyz/2017/06/06/Python基础番外总结/</id>
+    <published>2017-06-06T05:36:59.000Z</published>
+    <updated>2017-06-06T10:09:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一些学习过程中收集的小tip~</p>
+<a id="more"></a>
+<ol>
+<li><p>and和or语法相关<br> 在不加括号的前提下and的优先级大于or<br> <code>1 or 4 and 5</code>此例子运算时先进行and的运算再进行or的运算。</p>
+<p> Operation | Result<br> ———–|——–<br>x or y |if x is false, then y, else x<br>x and y |if x is false, then x, else y<br>not x |if x is false, then true, else false</p>
+<blockquote>
+<p>or运算即是，前者为真即前者，前者为假即是后者。<br>and运算即为，前者为假即前者，前者为真即后者。<br>or和and的运算结果相反。</p>
+</blockquote>
+</li>
+<li><p>python中所有的空</p>
+<ul>
+<li>None</li>
+<li>False</li>
+<li>0,以及所有表示0的数字类型。如0，0.0，0L</li>
+<li>空集合。dict，tuple，list，dict，set。。。</li>
+</ul>
+</li>
+<li><p>lambda（匿名函数）<br> 栗子：<code>lambda x: x % n &gt; 0</code><br> python中的lambda是简化函数，上栗中可以写为</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function li(x):</div><div class="line">    <span class="keyword">return</span> x % n &gt; <span class="number">0</span></div></pre></td></tr></table></figure>
+<p> 此间的n是上式中传下来的数据。</p>
+</li>
+<li><p>作用域</p>
+<p> Python中以<code>_</code>前缀来实现量的私有。大部分正常命名，类似<code>abc,xyz,PI</code>等默认public类型。而以<code>_</code>开头的命名默认为private，无法被直接引用，或者说不应该被直接引用，而<code>__name__,__author__,__doc__</code>则都是特殊变量，能够被直接引用，但都有各自的特殊用途。<br> 栗子：</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_1</span><span class="params">(name)</span>:</span></div><div class="line"><span class="keyword">return</span> <span class="string">'Hello, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_private_2</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">return</span> <span class="string">'Hi, %s'</span> % name</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">greeting</span><span class="params">(name)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(name) &gt; <span class="number">3</span>:</div><div class="line">        <span class="keyword">return</span> _private_1(name)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> _private_2(name)</div></pre></td></tr></table></figure>
+</li>
+<li><p>常用三方库</p>
+<p> 。。。待收集~~</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一些学习过程中收集的小tip~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+    
+    
+      <category term="Python" scheme="https://xblydxj.xyz/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python基础总结（3）</title>
+    <link href="https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(3)/"/>
+    <id>https://xblydxj.xyz/2017/06/06/Python基础总结(3)/</id>
+    <published>2017-06-06T05:32:57.000Z</published>
+    <updated>2017-06-06T10:09:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>接上篇~</p>
+<a id="more"></a>
+<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><blockquote>
+<p>Object Oriented Programing(OOP)面向对象编程</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, score)</span>:</span></div><div class="line">        self.name = name</div><div class="line">        self.score = score</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_score</span><span class="params">(self)</span>:</span></div><div class="line">        print(<span class="string">'%s: %s'</span> % (self.name, self.score))</div></pre></td></tr></table></figure>
+<p>类比于java，<code>__init__</code>函数相当于构造函数，<code>self</code>代表自身，必须传的参数。当定义了<code>__init__</code>方法之后，创建其实例时需要将对应的参数也传入。</p>
+<ol>
+<li><p>成员变量私有化</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,score)</span>:</span></div><div class="line">    self.__name = name</div><div class="line">    self.__score = score</div></pre></td></tr></table></figure>
+</li>
+<li><p>数据封装</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, score)</span>:</span></div><div class="line">      self.name = name</div><div class="line">      self.score = score</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">print_score</span><span class="params">(self)</span>:</span></div><div class="line">      print(<span class="string">'%s: %s'</span> % (self.name, self.score))</div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bart.print_score()</div><div class="line">Bart Simpson: <span class="number">59</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接上篇~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+    
+    
+      <category term="Python" scheme="https://xblydxj.xyz/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>同一台电脑两个github账户</title>
-    <link href="https://xblydxj.github.io/2017/06/01/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%A4%E4%B8%AAhexo/"/>
-    <id>https://xblydxj.github.io/2017/06/01/同一台电脑两个hexo/</id>
+    <link href="https://xblydxj.xyz/2017/06/01/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%A4%E4%B8%AAhexo/"/>
+    <id>https://xblydxj.xyz/2017/06/01/同一台电脑两个hexo/</id>
     <published>2017-06-01T10:21:43.000Z</published>
     <updated>2017-06-02T05:57:34.000Z</updated>
     
@@ -64,19 +152,19 @@
     
     </summary>
     
-      <category term="正经" scheme="https://xblydxj.github.io/categories/%E6%AD%A3%E7%BB%8F/"/>
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="Hexo" scheme="https://xblydxj.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://xblydxj.xyz/tags/Hexo/"/>
     
-      <category term="干货" scheme="https://xblydxj.github.io/tags/%E5%B9%B2%E8%B4%A7/"/>
+      <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
     
   </entry>
   
   <entry>
     <title>沉迷国漫，无法自拔</title>
-    <link href="https://xblydxj.github.io/2017/05/31/%E6%B2%89%E8%BF%B7%E5%9B%BD%E6%BC%AB%EF%BC%8C%E6%97%A0%E6%B3%95%E8%87%AA%E6%8B%94/"/>
-    <id>https://xblydxj.github.io/2017/05/31/沉迷国漫，无法自拔/</id>
+    <link href="https://xblydxj.xyz/2017/05/31/%E6%B2%89%E8%BF%B7%E5%9B%BD%E6%BC%AB%EF%BC%8C%E6%97%A0%E6%B3%95%E8%87%AA%E6%8B%94/"/>
+    <id>https://xblydxj.xyz/2017/05/31/沉迷国漫，无法自拔/</id>
     <published>2017-05-31T01:55:22.000Z</published>
     <updated>2017-06-01T08:40:05.000Z</updated>
     
@@ -158,21 +246,21 @@
     
     </summary>
     
-      <category term="live" scheme="https://xblydxj.github.io/categories/live/"/>
+      <category term="live" scheme="https://xblydxj.xyz/categories/live/"/>
     
     
-      <category term="live" scheme="https://xblydxj.github.io/tags/live/"/>
+      <category term="live" scheme="https://xblydxj.xyz/tags/live/"/>
     
-      <category term="日常" scheme="https://xblydxj.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+      <category term="日常" scheme="https://xblydxj.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
     
-      <category term="话题" scheme="https://xblydxj.github.io/tags/%E8%AF%9D%E9%A2%98/"/>
+      <category term="话题" scheme="https://xblydxj.xyz/tags/%E8%AF%9D%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>【video】Endless road</title>
-    <link href="https://xblydxj.github.io/2017/05/24/%5Bvideo%5DEndless%20road/"/>
-    <id>https://xblydxj.github.io/2017/05/24/[video]Endless road/</id>
+    <link href="https://xblydxj.xyz/2017/05/24/%5Bvideo%5DEndless%20road/"/>
+    <id>https://xblydxj.xyz/2017/05/24/[video]Endless road/</id>
     <published>2017-05-23T20:48:00.000Z</published>
     <updated>2017-05-25T08:08:06.000Z</updated>
     
@@ -188,19 +276,19 @@
     
     </summary>
     
-      <category term="生活" scheme="https://xblydxj.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://xblydxj.xyz/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="Live" scheme="https://xblydxj.github.io/tags/Live/"/>
+      <category term="Live" scheme="https://xblydxj.xyz/tags/Live/"/>
     
-      <category term="Video" scheme="https://xblydxj.github.io/tags/Video/"/>
+      <category term="Video" scheme="https://xblydxj.xyz/tags/Video/"/>
     
   </entry>
   
   <entry>
     <title>博客修改记录</title>
-    <link href="https://xblydxj.github.io/2017/05/18/%E5%8D%9A%E5%AE%A2%E4%BF%AE%E6%94%B9%E8%AE%B0%E5%BD%95/"/>
-    <id>https://xblydxj.github.io/2017/05/18/博客修改记录/</id>
+    <link href="https://xblydxj.xyz/2017/05/18/%E5%8D%9A%E5%AE%A2%E4%BF%AE%E6%94%B9%E8%AE%B0%E5%BD%95/"/>
+    <id>https://xblydxj.xyz/2017/05/18/博客修改记录/</id>
     <published>2017-05-18T07:17:08.000Z</published>
     <updated>2017-05-26T02:09:22.000Z</updated>
     
@@ -242,21 +330,21 @@
     
     </summary>
     
-      <category term="正经" scheme="https://xblydxj.github.io/categories/%E6%AD%A3%E7%BB%8F/"/>
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="干货" scheme="https://xblydxj.github.io/tags/%E5%B9%B2%E8%B4%A7/"/>
+      <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
     
-      <category term="Blog" scheme="https://xblydxj.github.io/tags/Blog/"/>
+      <category term="Blog" scheme="https://xblydxj.xyz/tags/Blog/"/>
     
   </entry>
   
   <entry>
     <title>Python基础总结（2）</title>
-    <link href="https://xblydxj.github.io/2017/05/12/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(2)/"/>
-    <id>https://xblydxj.github.io/2017/05/12/Python基础总结(2)/</id>
+    <link href="https://xblydxj.xyz/2017/05/12/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(2)/"/>
+    <id>https://xblydxj.xyz/2017/05/12/Python基础总结(2)/</id>
     <published>2017-05-12T03:36:58.000Z</published>
-    <updated>2017-05-17T10:09:22.000Z</updated>
+    <updated>2017-06-06T10:09:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>接上篇~</p>
 <a id="more"></a>
@@ -316,16 +404,6 @@
  <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 生成图片的缩略图</span></div><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line">im = Image.open(<span class="string">'test.png'</span>)</div><div class="line">print(im.format, im.size, im.mode)</div><div class="line">im.thumbnail((<span class="number">200</span>,<span class="number">100</span>))</div><div class="line">im.save(<span class="string">'thumb.jpg'</span>, <span class="string">'JPEG'</span>)</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><blockquote>
-<p>Object Oriented Programing(OOP)面向对象编程</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, score)</span>:</span></div><div class="line">        self.name = name</div><div class="line">        self.score = score</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_score</span><span class="params">(self)</span>:</span></div><div class="line">        print(<span class="string">'%s: %s'</span> % (self.name, self.score))</div></pre></td></tr></table></figure>
-<p>类比于java，<code>__init__</code>函数相当于构造函数，<code>self</code>代表自身，必须传的参数。当定义了<code>__init__</code>方法之后，创建其实例时需要将对应的参数也传入。</p>
-<ol>
-<li><p>成员变量私有化</p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,name,score)</span>:</span></div><div class="line">    self.__name = name</div><div class="line">    self.__score = score</div></pre></td></tr></table></figure>
-</li>
-</ol>
 <hr>
 <p>待续~</p>
 ]]></content>
@@ -336,17 +414,17 @@
     
     </summary>
     
-      <category term="正经" scheme="https://xblydxj.github.io/categories/%E6%AD%A3%E7%BB%8F/"/>
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="Python" scheme="https://xblydxj.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://xblydxj.xyz/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python基础总结（1）</title>
-    <link href="https://xblydxj.github.io/2017/04/24/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(1)/"/>
-    <id>https://xblydxj.github.io/2017/04/24/Python基础总结(1)/</id>
+    <link href="https://xblydxj.xyz/2017/04/24/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(1)/"/>
+    <id>https://xblydxj.xyz/2017/04/24/Python基础总结(1)/</id>
     <published>2017-04-24T09:48:03.000Z</published>
     <updated>2017-05-17T10:09:22.000Z</updated>
     
@@ -494,17 +572,17 @@
     
     </summary>
     
-      <category term="正经" scheme="https://xblydxj.github.io/categories/%E6%AD%A3%E7%BB%8F/"/>
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="Python" scheme="https://xblydxj.github.io/tags/Python/"/>
+      <category term="Python" scheme="https://xblydxj.xyz/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>过去文章链接</title>
-    <link href="https://xblydxj.github.io/2017/04/17/%E8%BF%87%E5%8E%BB%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5/"/>
-    <id>https://xblydxj.github.io/2017/04/17/过去文章链接/</id>
+    <link href="https://xblydxj.xyz/2017/04/17/%E8%BF%87%E5%8E%BB%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5/"/>
+    <id>https://xblydxj.xyz/2017/04/17/过去文章链接/</id>
     <published>2017-04-17T02:36:03.000Z</published>
     <updated>2017-05-24T10:18:35.000Z</updated>
     
@@ -564,10 +642,10 @@
     
     </summary>
     
-      <category term="正经" scheme="https://xblydxj.github.io/categories/%E6%AD%A3%E7%BB%8F/"/>
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="Android" scheme="https://xblydxj.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://xblydxj.xyz/tags/Android/"/>
     
   </entry>
   
