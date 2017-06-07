@@ -567,11 +567,10 @@
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                    <i class="my_icon">&#xe60d;</i>
+                  <i class="my_icon">&#xe60d;</i>
                 </span>
-                <a href="/2017/06/01/同一台电脑两个hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/01/同一台电脑两个hexo/" itemprop="commentCount"></span>
+                <a class="cloud-tie-join-count" href="/2017/06/01/同一台电脑两个hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -728,12 +727,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     
   </div>
 
@@ -835,7 +829,7 @@
               <span class="links-of-author-item">
                 <a href="https://www.zhihu.com/people/Siberia_Snow" target="_blank" title="知乎">
                   
-                    <i class="fa fa-fw fa-zhihu"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
                   知乎
                 </a>
@@ -1034,26 +1028,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://xblydxj.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'https://xblydxj.xyz/2017/06/01/同一台电脑两个hexo/';
-          this.page.identifier = '2017/06/01/同一台电脑两个hexo/';
-          this.page.title = '同一台电脑两个github账户';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://xblydxj.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -1064,12 +1038,19 @@
 
 
   
-
-
-
-
-
+    
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "b4cceaaf04194f03997e47c9a68f04b6",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
   
+
+
 
 
 
