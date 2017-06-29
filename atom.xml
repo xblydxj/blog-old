@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xblydxj.xyz/"/>
-  <updated>2017-06-06T10:09:22.000Z</updated>
+  <updated>2017-06-29T07:16:52.000Z</updated>
   <id>https://xblydxj.xyz/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多平台分享，各平台分享不同的内容</title>
+    <link href="https://xblydxj.xyz/2017/06/29/%E5%A4%9A%E5%B9%B3%E5%8F%B0%E5%88%86%E4%BA%AB%EF%BC%8C%E5%90%84%E5%B9%B3%E5%8F%B0%E5%88%86%E4%BA%AB%E4%B8%8D%E5%90%8C%E7%9A%84%E5%86%85%E5%AE%B9/"/>
+    <id>https://xblydxj.xyz/2017/06/29/多平台分享，各平台分享不同的内容/</id>
+    <published>2017-06-29T06:28:17.000Z</published>
+    <updated>2017-06-29T07:16:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~<br><a id="more"></a></p>
+<h1 id="多平台分享，各平台分享不同的内容"><a href="#多平台分享，各平台分享不同的内容" class="headerlink" title="多平台分享，各平台分享不同的内容"></a>多平台分享，各平台分享不同的内容</h1><blockquote>
+<p>关于正常的分享配置的过程就不赘述了，用的是友盟的分享，官方文档很详细。</p>
+</blockquote>
+<p>原本的分享方式是定义一个ShareAction，直接定义分享的内容及平台：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">share</span><span class="params">(Activity context, String comment, String title, String image, String url)</span> </span>&#123;</div><div class="line">  <span class="keyword">new</span> ShareAction(context).withText(comment)</div><div class="line">          .withTargetUrl(url) <span class="comment">// 分享的链接</span></div><div class="line">          .withTitle(title) <span class="comment">// 分享的标题</span></div><div class="line">          .withMedia(<span class="keyword">new</span> UMImage(context, image))  <span class="comment">// 分享的图片</span></div><div class="line">          .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.WEIXIN, SHARE_MEDIA.QQ, SHARE_MEDIA.SINA)  <span class="comment">// 分享的平台</span></div><div class="line">          .open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样的方式各个平台分享的内容都是相同的。<br><code>ShareAction</code>中提供了一个<code>setShareboardclickCallback</code>方法，从字面意思是在点击分享的平台之后的回响，拦截点击后的响应，所以就在此做文章,由于各个平台对内容的处理方式不同，所以就传来了各项都需要的基本数据，再单独处理，所以定义了一个单独的bean类，存储基本信息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ShareModel</span></span>&#123;</div><div class="line">   <span class="keyword">private</span> <span class="keyword">boolean</span> isShareCD;</div><div class="line">   <span class="keyword">private</span> String title; </div><div class="line">   <span class="keyword">private</span> String performer; <span class="comment">// 演奏家</span></div><div class="line">   <span class="keyword">private</span> String composer; <span class="comment">// 作曲家</span></div><div class="line">   <span class="keyword">private</span> String CDName; <span class="comment">// 专辑名</span></div><div class="line">   <span class="keyword">private</span> String album; <span class="comment">// 唱片名</span></div><div class="line">   <span class="keyword">private</span> Activity context;</div><div class="line">   <span class="keyword">private</span> String image;</div><div class="line">   <span class="keyword">private</span> String url;</div><div class="line">&#125;</div><div class="line">ShareModel mShareModel = <span class="keyword">new</span> ShareModel();</div><div class="line"></div><div class="line"><span class="keyword">private</span> ShareBoardlistener shareBoardlistener = <span class="keyword">new</span> ShareBoardlistener() &#123;</div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onclick</span><span class="params">(SnsPlatform snsPlatform, SHARE_MEDIA share_media)</span> </span>&#123;</div><div class="line">       <span class="keyword">if</span> (share_media != <span class="keyword">null</span>) &#123;</div><div class="line">           <span class="keyword">if</span> (share_media == SHARE_MEDIA.WEIXIN || share_media == SHARE_MEDIA.QQ) &#123;</div><div class="line">                <span class="keyword">new</span> ShareAction(mShareModel.context)</div><div class="line">                        .setPlatform(share_media)</div><div class="line">                        <span class="comment">// 微信与QQ基本配置，如withTitle等</span></div><div class="line">                        .setCallback(umShareListener)</div><div class="line">                        .share();</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(share_media == SHARE_MEDIA.WEIXIN_CIRCLE)&#123;</div><div class="line">                <span class="keyword">new</span> ShareAction(mShareModel.context)</div><div class="line">                        .setPlatform(share_media)</div><div class="line">                        <span class="comment">// 微信朋友圈的基本配置</span></div><div class="line">                        .setCallback(umShareListener)</div><div class="line">                        .share();</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(share_media == SHARE_MEDIA.SINA)&#123;</div><div class="line">                <span class="keyword">new</span> ShareAction(mShareModel.context)</div><div class="line">                        .setPlatform(share_media)</div><div class="line">                        <span class="comment">// 微博的基本配置</span></div><div class="line">                        .setCallback(umShareListener)</div><div class="line">                        .share();</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>由于各个<code>share_media</code>对应的量是枚举量，不能使用<code>switch</code>语句进行<code>case</code>。所以还是用if。<br>定义了这点击监听之后，在原本的<code>ShareAction</code>中进行设置：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">share</span><span class="params">(Activity context, <span class="keyword">boolean</span> isShareCD, String album, String CDName, String composer, String</span></span></div><div class="line">            performer, String image, String url) &#123;</div><div class="line">   mShareModel.context = context;</div><div class="line">   mShareModel.isShareCD = isShareCD;</div><div class="line">   mShareModel.album = album;</div><div class="line">   mShareModel.CDName = CDName;</div><div class="line">   mShareModel.composer = composer;</div><div class="line">   mShareModel.performer = performer;</div><div class="line">   mShareModel.image = image;</div><div class="line">   mShareModel.url = url;</div><div class="line">   <span class="keyword">new</span> ShareAction(context)</div><div class="line">           .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.QQ, SHARE_MEDIA.SINA)</div><div class="line">           .setShareboardclickCallback(shareBoardlistener)</div><div class="line">           .open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>有外部传进来那个bean类的各项基本数据，然后再用于<code>shareBoardlistener</code>进行数据配置。</p>
+<p>Tip：如果有一个共同的配置也需要在<code>shareBoardlistener</code>里进行配置，外部无效。</p>
+<p>微博：</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~&lt;br&gt;
+    
+    </summary>
+    
+      <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+    
+    
+      <category term="Android" scheme="https://xblydxj.xyz/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Python基础总结番外</title>
