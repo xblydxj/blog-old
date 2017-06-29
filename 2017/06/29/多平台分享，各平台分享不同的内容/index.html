@@ -118,10 +118,14 @@
 <meta property="og:url" content="https://xblydxj.xyz/2017/06/29/多平台分享，各平台分享不同的内容/index.html">
 <meta property="og:site_name" content="Xblydxj">
 <meta property="og:description" content="之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~">
-<meta property="og:updated_time" content="2017-06-29T07:24:25.000Z">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-5.png">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-4.png">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-3.png">
+<meta property="og:updated_time" content="2017-06-29T07:25:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多平台分享，各平台分享不同的内容">
 <meta name="twitter:description" content="之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~">
+<meta name="twitter:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-5.png">
 
 
 
@@ -621,10 +625,8 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">share</span><span class="params">(Activity context, <span class="keyword">boolean</span> isShareCD, String album, String CDName, String composer, String</span></span></div><div class="line">            performer, String image, String url) &#123;</div><div class="line">   mShareModel.context = context;</div><div class="line">   mShareModel.isShareCD = isShareCD;</div><div class="line">   mShareModel.album = album;</div><div class="line">   mShareModel.CDName = CDName;</div><div class="line">   mShareModel.composer = composer;</div><div class="line">   mShareModel.performer = performer;</div><div class="line">   mShareModel.image = image;</div><div class="line">   mShareModel.url = url;</div><div class="line">   <span class="keyword">new</span> ShareAction(context)</div><div class="line">           .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.QQ, SHARE_MEDIA.SINA)</div><div class="line">           .setShareboardclickCallback(shareBoardlistener)</div><div class="line">           .open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>有外部传进来那个bean类的各项基本数据，然后再用于<code>shareBoardlistener</code>进行数据配置。</p>
 <p>Tip：如果有一个共同的配置也需要在<code>shareBoardlistener</code>里进行配置，外部无效。</p>
-<h5 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h5><pre><code>微博：![微博](http://oni7r1rj8.bkt.clouddn.com/28-share-5.png)
-微信：![微信](http://oni7r1rj8.bkt.clouddn.com/28-share-4.png)
-朋友圈：![朋友圈](http://oni7r1rj8.bkt.clouddn.com/28-share-3.png)
-</code></pre>
+<h5 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h5><p>微博：<img src="http://oni7r1rj8.bkt.clouddn.com/28-share-5.png" alt="微博"><br>微信：<img src="http://oni7r1rj8.bkt.clouddn.com/28-share-4.png" alt="微信"><br>朋友圈：<img src="http://oni7r1rj8.bkt.clouddn.com/28-share-3.png" alt="朋友圈"></p>
+
       
     </div>
 
@@ -841,7 +843,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#原来的分享方式"><span class="nav-number">1.</span> <span class="nav-text">原来的分享方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用shareBoardlistener拦截修改分享内容"><span class="nav-number">2.</span> <span class="nav-text">使用shareBoardlistener拦截修改分享内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#效果："><span class="nav-number">3.</span> <span class="nav-text">效果：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#原来的分享方式"><span class="nav-number">1.</span> <span class="nav-text">原来的分享方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用shareBoardlistener拦截修改分享内容"><span class="nav-number">2.</span> <span class="nav-text">使用shareBoardlistener拦截修改分享内容</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#效果"><span class="nav-number">3.</span> <span class="nav-text">效果</span></a></li></ol></div>
             
 
           </div>
