@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://xblydxj.xyz/2017/04/17/%E8%BF%87%E5%8E%BB%E6%96%87%E7%AB%A0%E9%93%BE%E6%8E%A5/</loc>
-    <lastmod>2017-08-08T07:54:34.000Z</lastmod>
+    <lastmod>2017-08-08T08:00:44.000Z</lastmod>
     <data>
         <display>
         <title>过去文章链接</title>
@@ -88,26 +88,6 @@
 
     
   <url>
-    <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2017-06-06T10:09:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python基础总结番外</title>
-        <pubTime>2017-06-06T05:36:59.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(3)/</loc>
     <lastmod>2017-06-06T10:09:22.000Z</lastmod>
     <data>
@@ -134,6 +114,26 @@
         <display>
         <title>Python基础总结（2）</title>
         <pubTime>2017-05-12T03:36:58.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-06-06T10:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础总结番外</title>
+        <pubTime>2017-06-06T05:36:59.000Z</pubTime>
         
         <tag>Python</tag>
          
