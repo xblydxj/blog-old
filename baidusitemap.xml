@@ -46,6 +46,26 @@
 
     
   <url>
+    <loc>https://xblydxj.xyz/2017/05/08/%E8%BF%9F%E5%88%B0%E7%9A%84MVP/</loc>
+    <lastmod>2017-07-16T10:11:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>迟到的MVP</title>
+        <pubTime>2017-05-08T02:58:06.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://xblydxj.xyz/2017/07/05/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E6%8F%92%E4%BB%B6%E6%95%B4%E5%90%88/</loc>
     <lastmod>2017-07-05T10:53:00.000Z</lastmod>
     <data>
@@ -110,6 +130,26 @@
 
     
   <url>
+    <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-06-06T10:09:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>Python基础总结番外</title>
+        <pubTime>2017-06-06T05:36:59.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://xblydxj.xyz/2017/05/12/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(2)/</loc>
     <lastmod>2017-06-06T10:09:22.000Z</lastmod>
     <data>
@@ -150,26 +190,6 @@
 
     
   <url>
-    <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2017-06-06T10:09:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>Python基础总结番外</title>
-        <pubTime>2017-06-06T05:36:59.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-         
-           
-             
-              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://xblydxj.xyz/2017/06/01/%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91%E4%B8%A4%E4%B8%AAhexo/</loc>
     <lastmod>2017-06-02T05:57:34.000Z</lastmod>
     <data>
@@ -177,9 +197,9 @@
         <title>同一台电脑两个github账户</title>
         <pubTime>2017-06-01T10:21:43.000Z</pubTime>
         
-        <tag>干货</tag>
-         
         <tag>Hexo</tag>
+         
+        <tag>干货</tag>
          
          
            
@@ -199,9 +219,9 @@
         <title>博客修改记录</title>
         <pubTime>2017-05-18T07:17:08.000Z</pubTime>
         
-        <tag>Blog</tag>
-         
         <tag>干货</tag>
+         
+        <tag>Blog</tag>
          
          
            
