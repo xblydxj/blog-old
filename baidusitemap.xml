@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://xblydxj.xyz/2017/07/18/MVVM%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A5%E5%8F%8A%E4%B8%8EMVP%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2017-08-10T08:59:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>MVVM的实现以及与MVP的对比</title>
+        <pubTime>2017-07-18T00:03:00.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://xblydxj.xyz/2017/07/14/%E4%B8%8A%E6%B5%B7%E7%9A%84%E8%90%BD%E5%B9%95%E4%B9%8B%E8%A1%8C%EF%BC%8C%E5%B4%87%E6%98%8E%E5%B2%9B/</loc>
     <lastmod>2017-08-08T10:48:43.000Z</lastmod>
     <data>
@@ -32,26 +52,6 @@
         <display>
         <title>过去文章链接</title>
         <pubTime>2017-04-17T02:36:03.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="正经" url="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://xblydxj.xyz/2017/07/18/MVVM%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A5%E5%8F%8A%E4%B8%8EMVP%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
-    <lastmod>2017-07-18T00:03:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>MVVM的实现以及与MVP的对比。</title>
-        <pubTime>2017-07-18T00:03:00.000Z</pubTime>
         
         <tag>Android</tag>
          
@@ -170,12 +170,12 @@
 
     
   <url>
-    <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://xblydxj.xyz/2017/05/12/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(2)/</loc>
     <lastmod>2017-06-06T10:09:22.000Z</lastmod>
     <data>
         <display>
-        <title>Python基础总结番外</title>
-        <pubTime>2017-06-06T05:36:59.000Z</pubTime>
+        <title>Python基础总结（2）</title>
+        <pubTime>2017-05-12T03:36:58.000Z</pubTime>
         
         <tag>Python</tag>
          
@@ -190,12 +190,12 @@
 
     
   <url>
-    <loc>https://xblydxj.xyz/2017/05/12/Python%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%93(2)/</loc>
+    <loc>https://xblydxj.xyz/2017/06/06/Python%E5%9F%BA%E7%A1%80%E7%95%AA%E5%A4%96%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2017-06-06T10:09:22.000Z</lastmod>
     <data>
         <display>
-        <title>Python基础总结（2）</title>
-        <pubTime>2017-05-12T03:36:58.000Z</pubTime>
+        <title>Python基础总结番外</title>
+        <pubTime>2017-06-06T05:36:59.000Z</pubTime>
         
         <tag>Python</tag>
          

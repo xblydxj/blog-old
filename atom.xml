@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xblydxj.xyz/"/>
-  <updated>2017-07-18T00:03:00.000Z</updated>
+  <updated>2017-08-10T08:59:59.000Z</updated>
   <id>https://xblydxj.xyz/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>MVVM的实现以及与MVP的对比。</title>
+    <title>MVVM的实现以及与MVP的对比</title>
     <link href="https://xblydxj.xyz/2017/07/18/MVVM%E7%9A%84%E5%AE%9E%E7%8E%B0%E4%BB%A5%E5%8F%8A%E4%B8%8EMVP%E7%9A%84%E5%AF%B9%E6%AF%94/"/>
     <id>https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/</id>
     <published>2017-07-18T00:03:00.000Z</published>
-    <updated>2017-07-18T00:03:00.000Z</updated>
+    <updated>2017-08-10T08:59:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。<br>关于Dagger2的部分之后再单独进行介绍。</p>
 <h3 id="MVVM架构思想"><a href="#MVVM架构思想" class="headerlink" title="MVVM架构思想"></a>MVVM架构思想</h3><ul>
