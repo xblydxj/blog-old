@@ -112,20 +112,22 @@
 
 
 
-<meta name="description" content="之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~">
+<meta name="description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。
+MVVM架构思想
+M(Mod">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多平台分享，各平台分享不同的内容">
-<meta property="og:url" content="https://xblydxj.xyz/2017/06/29/多平台分享，各平台分享不同的内容/index.html">
+<meta property="og:title" content="MVVM的实现以及与MVP的对比。">
+<meta property="og:url" content="https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/index.html">
 <meta property="og:site_name" content="Xblydxj">
-<meta property="og:description" content="之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~">
-<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-5.png">
-<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-4.png">
-<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-3.png">
-<meta property="og:updated_time" content="2017-06-29T07:27:49.000Z">
+<meta property="og:description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。
+MVVM架构思想
+M(Mod">
+<meta property="og:updated_time" content="2017-07-18T00:03:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多平台分享，各平台分享不同的内容">
-<meta name="twitter:description" content="之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~">
-<meta name="twitter:image" content="http://oni7r1rj8.bkt.clouddn.com/28-share-5.png">
+<meta name="twitter:title" content="MVVM的实现以及与MVP的对比。">
+<meta name="twitter:description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。
+MVVM架构思想
+M(Mod">
 
 
 
@@ -153,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="https://xblydxj.xyz/2017/06/29/多平台分享，各平台分享不同的内容/"/>
+  <link rel="canonical" href="https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/"/>
 
 
 
 
 
-  <title>多平台分享，各平台分享不同的内容 | Xblydxj</title>
+  <title>MVVM的实现以及与MVP的对比。 | Xblydxj</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -493,7 +495,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://xblydxj.xyz/2017/06/29/多平台分享，各平台分享不同的内容/">
+    <link itemprop="mainEntityOfPage" href="https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xblydxj">
       <meta itemprop="description" content="">
@@ -505,12 +507,12 @@
     </span>
 
     
-      <header class="post-header" xlink:href="/2017/06/29/多平台分享，各平台分享不同的内容/">
+      <header class="post-header" xlink:href="/2017/07/18/MVVM的实现以及与MVP的对比/">
         
         
-          <div class="post-picture" style="background-image: url(http://oni7r1rj8.bkt.clouddn.com/28-share-1.png)" itemprop="url">
+          <div class="post-picture" style="background-image: url(http://oni7r1rj8.bkt.clouddn.com/mvvm-1.png)" itemprop="url">
             <h2 style="color:#ffffff" class="post-title"
-                                                       itemprop="name headline">多平台分享，各平台分享不同的内容</h2>
+                                                       itemprop="name headline">MVVM的实现以及与MVP的对比。</h2>
           </div>
         
 
@@ -524,8 +526,8 @@
                 <span class="post-meta-item-text">发表于</span>
               
               <time style="color: #333333" title="创建于" itemprop="dateCreated datePublished"
-                    datetime="2017-06-29T14:28:17+08:00">
-                2017-06-29
+                    datetime="2017-07-18T08:03:00+08:00">
+                2017-07-18
               </time>
             
 
@@ -564,20 +566,21 @@
           
             
               <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="my_icon">&#xe60d;</i>
-                </span>
-                <a class="cloud-tie-join-count" href="/2017/06/29/多平台分享，各平台分享不同的内容/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
-                </a>
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe60d;</i>
               </span>
+              
+                <a href="/2017/07/18/MVVM的实现以及与MVP的对比/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/18/MVVM的实现以及与MVP的对比/" itemprop="commentsCount"></span>
+                </a>
+              
             
           
 
           
           
-             <span id="/2017/06/29/多平台分享，各平台分享不同的内容/" class="leancloud_visitors" data-flag-title="多平台分享，各平台分享不同的内容">
+             <span id="/2017/07/18/MVVM的实现以及与MVP的对比/" class="leancloud_visitors" data-flag-title="MVVM的实现以及与MVP的对比。">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="my_icon">&#xe60c;</i>
@@ -610,22 +613,45 @@
       
 
       
-        <p>之前做的分享都是先定义分享的内容之后再定义分享的平台，这次的需求是同一个东西分享在各个平台显示内容不同~<br><a id="more"></a></p>
-<blockquote>
-<p>关于正常的分享配置的过程就不赘述了，用的是友盟的分享，官方文档很详细。</p>
-</blockquote>
-<h4 id="原来的分享方式"><a href="#原来的分享方式" class="headerlink" title="原来的分享方式"></a>原来的分享方式</h4><blockquote>
-<p>原本的分享方式是定义一个ShareAction，直接定义分享的内容及平台：</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">share</span><span class="params">(Activity context, String comment, String title, String image, String url)</span> </span>&#123;</div><div class="line">  <span class="keyword">new</span> ShareAction(context).withText(comment)</div><div class="line">          .withTargetUrl(url) <span class="comment">// 分享的链接</span></div><div class="line">          .withTitle(title) <span class="comment">// 分享的标题</span></div><div class="line">          .withMedia(<span class="keyword">new</span> UMImage(context, image))  <span class="comment">// 分享的图片</span></div><div class="line">          .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE,SHARE_MEDIA.WEIXIN, SHARE_MEDIA.QQ, SHARE_MEDIA.SINA)  <span class="comment">// 分享的平台</span></div><div class="line">          .open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这样的方式各个平台分享的内容都是相同的。</p>
-<h4 id="使用shareBoardlistener拦截修改分享内容"><a href="#使用shareBoardlistener拦截修改分享内容" class="headerlink" title="使用shareBoardlistener拦截修改分享内容"></a>使用shareBoardlistener拦截修改分享内容</h4><p><code>ShareAction</code>中提供了一个<code>setShareboardclickCallback</code>方法，从字面意思是在点击分享的平台之后的回响，拦截点击后的响应，所以就在此做文章,由于各个平台对内容的处理方式不同，所以就传来了各项都需要的基本数据，再单独处理，所以定义了一个单独的bean类，存储基本信息。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ShareModel</span></span>&#123;</div><div class="line">   <span class="keyword">private</span> <span class="keyword">boolean</span> isShareCD;</div><div class="line">   <span class="keyword">private</span> String title;</div><div class="line">   <span class="keyword">private</span> String performer; <span class="comment">// 演奏家</span></div><div class="line">   <span class="keyword">private</span> String composer; <span class="comment">// 作曲家</span></div><div class="line">   <span class="keyword">private</span> String CDName; <span class="comment">// 专辑名</span></div><div class="line">   <span class="keyword">private</span> String album; <span class="comment">// 唱片名</span></div><div class="line">   <span class="keyword">private</span> Activity context;</div><div class="line">   <span class="keyword">private</span> String image;</div><div class="line">   <span class="keyword">private</span> String url;</div><div class="line">&#125;</div><div class="line">ShareModel mShareModel = <span class="keyword">new</span> ShareModel();</div><div class="line"></div><div class="line"><span class="keyword">private</span> ShareBoardlistener shareBoardlistener = <span class="keyword">new</span> ShareBoardlistener() &#123;</div><div class="line">   <span class="meta">@Override</span></div><div class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onclick</span><span class="params">(SnsPlatform snsPlatform, SHARE_MEDIA share_media)</span> </span>&#123;</div><div class="line">       <span class="keyword">if</span> (share_media != <span class="keyword">null</span>) &#123;</div><div class="line">           <span class="keyword">if</span> (share_media == SHARE_MEDIA.WEIXIN || share_media == SHARE_MEDIA.QQ) &#123;</div><div class="line">                <span class="keyword">new</span> ShareAction(mShareModel.context)</div><div class="line">                        .setPlatform(share_media)</div><div class="line">                        <span class="comment">// 微信与QQ基本配置，如withTitle等</span></div><div class="line">                        .setCallback(umShareListener)</div><div class="line">                        .share();</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(share_media == SHARE_MEDIA.WEIXIN_CIRCLE)&#123;</div><div class="line">                <span class="keyword">new</span> ShareAction(mShareModel.context)</div><div class="line">                        .setPlatform(share_media)</div><div class="line">                        <span class="comment">// 微信朋友圈的基本配置</span></div><div class="line">                        .setCallback(umShareListener)</div><div class="line">                        .share();</div><div class="line">           &#125;<span class="keyword">else</span> <span class="keyword">if</span>(share_media == SHARE_MEDIA.SINA)&#123;</div><div class="line">                <span class="keyword">new</span> ShareAction(mShareModel.context)</div><div class="line">                        .setPlatform(share_media)</div><div class="line">                        <span class="comment">// 微博的基本配置</span></div><div class="line">                        .setCallback(umShareListener)</div><div class="line">                        .share();</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>由于各个<code>share_media</code>对应的量是枚举量，不能使用<code>switch</code>语句进行<code>case</code>。所以还是用if。<br>定义了这点击监听之后，在原本的<code>ShareAction</code>中进行设置：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">share</span><span class="params">(Activity context, <span class="keyword">boolean</span> isShareCD, String album, String CDName, String composer, String</span></span></div><div class="line">            performer, String image, String url) &#123;</div><div class="line">   mShareModel.context = context;</div><div class="line">   mShareModel.isShareCD = isShareCD;</div><div class="line">   mShareModel.album = album;</div><div class="line">   mShareModel.CDName = CDName;</div><div class="line">   mShareModel.composer = composer;</div><div class="line">   mShareModel.performer = performer;</div><div class="line">   mShareModel.image = image;</div><div class="line">   mShareModel.url = url;</div><div class="line">   <span class="keyword">new</span> ShareAction(context)</div><div class="line">           .setDisplayList(SHARE_MEDIA.WEIXIN_CIRCLE, SHARE_MEDIA.WEIXIN, SHARE_MEDIA.QQ, SHARE_MEDIA.SINA)</div><div class="line">           .setShareboardclickCallback(shareBoardlistener)</div><div class="line">           .open();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>有外部传进来那个bean类的各项基本数据，然后再用于<code>shareBoardlistener</code>进行数据配置。</p>
-<p>Tip：如果有一个共同的配置也需要在<code>shareBoardlistener</code>里进行配置，外部无效。</p>
-<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p>微博：<img src="http://oni7r1rj8.bkt.clouddn.com/28-share-5.png" alt="微博"><br>微信：<img src="http://oni7r1rj8.bkt.clouddn.com/28-share-4.png" alt="微信"><br>朋友圈：<img src="http://oni7r1rj8.bkt.clouddn.com/28-share-3.png" alt="朋友圈"></p>
+        <p>在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。<br>关于Dagger2的部分之后再单独进行介绍。</p>
+<h3 id="MVVM架构思想"><a href="#MVVM架构思想" class="headerlink" title="MVVM架构思想"></a>MVVM架构思想</h3><ul>
+<li>M(Model)：控制着架构上的逻辑等的实体模型。</li>
+<li>VM(ViewModel)：与mvp不同的是ViewModel也是中间桥梁，但他并不需要契约类进行连接，而是使用DataBinding着一框架进行单向或双向的绑定。</li>
+<li>V(View)：代表着Activity与xml的ui界面内容。</li>
+</ul>
+<p>MVVM的关键思想还是在于数据绑定，原本的mvc或是mvp每次的ui更新，其上的数据也需要随着变化都是从代码中跟随逻辑进行变化，而使用MVVM将使控件与其需要的内容进行绑定，每一次的数据更新将自动进行ui的更新。</p>
+<p>依旧还是需要动手实践一下：</p>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>MVVM框架由谷歌推荐，所以也拥有它特别的位置，从databinding开启的位置就可以看出来：<br>在gradle文件中添加下面几行代码即可开启databinding：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dataBinding &#123;</div><div class="line">   enabled true</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>非常简单的开启方式。</p>
+<h4 id="xml界面"><a href="#xml界面" class="headerlink" title="xml界面"></a>xml界面</h4><p>简单写一个界面作为示范，选用一个每日一文的接口：<a href="https://interface.meiriyiwen.com/article/today" target="_blank" rel="external">https://interface.meiriyiwen.com/article/today</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">layout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"com.xblydxj.mvvmdemo.Article.DataBean"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">variable</span></span></div><div class="line">            <span class="attr">name</span>=<span class="string">"article"</span></div><div class="line">            <span class="attr">type</span>=<span class="string">"DataBean"</span>/&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">        <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">        <span class="attr">tools:context</span>=<span class="string">"com.xblydxj.mvvmdemo.MainActivity"</span>&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/time + article.date.curr&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/author + article.author&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/title + article.title&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/digest + article.digest&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/content + article.content&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">layout</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>xml的变化非常明显，首先最外层的包裹已经变化了，根节点为<layout>标签，而上方使用<data>标签将本页面所需要的内容提供出来，下方即为正常的ui界面。</data></layout></p>
+<h4 id="bean的提供"><a href="#bean的提供" class="headerlink" title="bean的提供"></a>bean的提供</h4><p>根据<a href="https://interface.meiriyiwen.com/article/today" target="_blank" rel="external">每日一文</a>的json提供，我们先写出他对应的bean类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Article</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> DataBean data;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DataBean</span> </span>&#123;</div><div class="line">        <span class="keyword">public</span> DateBean date;</div><div class="line">        <span class="keyword">public</span> String author;</div><div class="line">        <span class="keyword">public</span> String title;</div><div class="line">        <span class="keyword">public</span> String digest;</div><div class="line">        <span class="keyword">public</span> String content;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">int</span> wc;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DateBean</span> </span>&#123;</div><div class="line">            <span class="keyword">public</span> String curr;</div><div class="line">            <span class="keyword">public</span> String prev;</div><div class="line">            <span class="keyword">public</span> String next;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>去除了一些set，get方法，改为public，以便调用。<br>转向xml部分：<br>在上部分的data标签中，我们需要提供变量，以供显示：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"com.xblydxj.mvvmdemo.Article.DataBean"</span>/&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">variable</span></span></div><div class="line">       <span class="attr">name</span>=<span class="string">"article"</span></div><div class="line">       <span class="attr">type</span>=<span class="string">"DataBean"</span>/&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">data</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在其中使用import标签注入，在定义一个变量以供调用。<br>而下方每一个用于显示内容的textview，其text的显示属性将上方提供的数据进行绑定：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:text="@&#123;article.content&#125;"</div></pre></td></tr></table></figure>
+<p>用于显示bean中content内容的TextView也将上方data提供的article中的content进行绑定，格式也真是这样。</p>
+<h4 id="Activty部分"><a href="#Activty部分" class="headerlink" title="Activty部分"></a>Activty部分</h4><p>这一部分完成双向绑定的工作，但和mvp不同的是，由于大部分ui是由数据控制进行改变的，所以mvvm中的activity已经节省了许多工作，所以这里的activity也包含着model层的工作，依旧是集中的。</p>
+<p>其实这一点是值得吐槽的：MVP架构整体的解耦非常彻底，但是用于工程时很明显的一个弊端就是，类文件增加翻倍，而mvvm并没有这样的问题，他更自由。</p>
+<p>这里为了方便，我再gradle中添加了rxjava与retrofit的依赖用于网络请求部分的编写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.okhttp3:okhttp:3.4.1&apos;</div><div class="line">compile &apos;com.squareup.okio:okio:1.9.0&apos;</div><div class="line">compile &apos;io.reactivex:rxandroid:1.2.1&apos;</div><div class="line">compile &apos;io.reactivex:rxjava:1.2.1&apos;</div><div class="line">compile &apos;com.artemzin.rxjava:proguard-rules:1.2.1.0&apos;</div><div class="line">compile &apos;com.squareup.retrofit2:retrofit:2.0.0-beta4&apos;</div><div class="line">compile &apos;com.squareup.retrofit2:converter-gson:2.0.0-beta4&apos;</div><div class="line">compile &apos;com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4&apos;</div></pre></td></tr></table></figure>
+<p>在进行activity书写前，我们确保了xml文件的正确性，在studio中提前进行一次编译，这时databinding将为我们生成一个文件，原xml文件名为：activity_main.xml 而对应的生成的类文件名即为：ActivityMainBinding。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    ActivityMainBinding mBinding;</div><div class="line"></div><div class="line">    Api mRetrofit = <span class="keyword">new</span> Retrofit.Builder()</div><div class="line">            .baseUrl(<span class="string">"https://interface.meiriyiwen.com/"</span>)</div><div class="line">            .addConverterFactory(GsonConverterFactory.create())</div><div class="line">            .client(<span class="keyword">new</span> OkHttpClient.Builder().build())</div><div class="line">            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</div><div class="line">            .build()</div><div class="line">            .create(Api.class);</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        mBinding = DataBindingUtil.setContentView(<span class="keyword">this</span>, R.layout.activity_main);</div><div class="line">        mRetrofit.getArticle()</div><div class="line">                .subscribeOn(Schedulers.io())</div><div class="line">                .observeOn(AndroidSchedulers.mainThread())</div><div class="line">                .subscribe(<span class="keyword">new</span> Action1&lt;Article&gt;() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Article article)</span> </span>&#123;</div><div class="line">                        mBinding.setArticle(article.data);</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如上，非常的精简，除了绑定部分的两行代码以外，剩余部分都是网络请求的一些初始化，一些mvc和mvp中需要做的关于ui与数据的显示已经全部由databinding帮我们做了。</p>
+<p>在activity中首先我们在onCreate里去除了原有的setContentView的这行代码，而改为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ActivityMainBinding mBinding = DataBindingUtil.setContentView(<span class="keyword">this</span>, R.layout.activity_main);</div></pre></td></tr></table></figure>
+<p>抽取为成员变量以便调用。这一步即是替代了原有的setContentView。</p>
+<p>之后便是直接开始retrofit的网络请求部分，先进行他的api定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Api</span> </span>&#123;</div><div class="line">    <span class="meta">@GET</span>(<span class="string">"article/today"</span>)</div><div class="line">    <span class="function">Observable&lt;Article&gt; <span class="title">getArticle</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>后续步骤就在activity中进行，成员变量的初始化，然后由retrofit进行请求，之后再在订阅成功后的next中将databinding需要的数据提供给他：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mBinding.setArticle(article.data);</div></pre></td></tr></table></figure>
+<p>这样即完成了一个简单的MVVM的构建。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一个比较关键的使用，是关于recyclerview或是listview在这里的使用。databinding的recyclerview部分有些麻烦，但思想依旧是相同的，具体可以看这篇博客：<a href="https://github.com/LyndonChin/MasteringAndroidDataBinding" target="_blank" rel="external">精通DataBinding</a></p>
+<p>但说回来，再某些时候，如果觉得使用databinding不熟练或是不方便，可以立马就转回原有的mvc写法，只是数据的部分再次归还给了activity，但不影响我们项目整体的编写。</p>
+<p>如今databinding已经成熟，从项目的角度讲，相比较于MVP我更加推荐MVVM的写法。ui与逻辑的分离更加彻底。并且没有更多的文件增加。熟练掌握databinding之后会很舒服。</p>
 
       
     </div>
@@ -668,8 +694,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/06/Python基础番外总结/" rel="next" title="Python基础总结番外">
-                <i class="fa fa-chevron-left"></i> Python基础总结番外
+              <a href="/2017/07/16/迟到的MVP/" rel="next" title="迟到的MVP">
+                <i class="fa fa-chevron-left"></i> 迟到的MVP
               </a>
             
           </div>
@@ -677,10 +703,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/07/魔兽世界插件整合/" rel="prev" title="魔兽世界插件整合">
-                魔兽世界插件整合 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -706,7 +728,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+      <div id="SOHUCS"></div>
     
   </div>
 
@@ -754,7 +776,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -776,7 +798,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -847,7 +869,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#原来的分享方式"><span class="nav-number">1.</span> <span class="nav-text">原来的分享方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用shareBoardlistener拦截修改分享内容"><span class="nav-number">2.</span> <span class="nav-text">使用shareBoardlistener拦截修改分享内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果"><span class="nav-number">3.</span> <span class="nav-text">效果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM架构思想"><span class="nav-number">1.</span> <span class="nav-text">MVVM架构思想</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#xml界面"><span class="nav-number">1.2.</span> <span class="nav-text">xml界面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bean的提供"><span class="nav-number">1.3.</span> <span class="nav-text">bean的提供</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Activty部分"><span class="nav-number">1.4.</span> <span class="nav-text">Activty部分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1017,24 +1039,36 @@
 
 
   
-    
-    <script>
-      var cloudTieConfig = {
-        url: document.location.href, 
-        sourceId: "",
-        productKey: "b4cceaaf04194f03997e47c9a68f04b6",
-        target: "cloud-tie-wrapper"
-      };
-    </script>
-    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+
+
+
+
+
   
 
 
 
 
 
+  
 
 
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt9z0xzL';
+      var conf = '227295eb8809662a0587c75c0024680f';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
 
 
 
