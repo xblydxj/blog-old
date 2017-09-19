@@ -226,7 +226,7 @@
     <link href="https://xblydxj.xyz/2017/07/05/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E6%8F%92%E4%BB%B6%E6%95%B4%E5%90%88/"/>
     <id>https://xblydxj.xyz/2017/07/05/魔兽世界插件整合/</id>
     <published>2017-07-05T10:53:00.000Z</published>
-    <updated>2017-07-05T10:53:00.000Z</updated>
+    <updated>2017-09-19T05:39:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>魔兽世界洁面可定制性强，也有许多整合的界面美化插件，经过几年时间断断续续的游戏生活，插件也在持续改善增强。现在主要使用eui与WA进行搭建。<br><a id="more"></a></p>
 <h3 id="魔兽世界插件整合"><a href="#魔兽世界插件整合" class="headerlink" title="魔兽世界插件整合"></a>魔兽世界插件整合</h3><p>原始界面：<br><img src="http://oni7r1rj8.bkt.clouddn.com/defaltui.jpg" alt="原始界面"><br>当前7月5号更新整合界面（使用的21:9的带鱼屏显宽）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/all_hunter.jpg" alt="整合界面"></p>
@@ -261,15 +261,20 @@
 <p><a href="https://www.bilibili.com/video/av8996867/#page=2" target="_blank" rel="external">酒仙wa定制</a>这是酒仙专精的定制。</p>
 </blockquote>
 <p>–</p>
-<h4 id="XIVbar，SexyMap"><a href="#XIVbar，SexyMap" class="headerlink" title="XIVbar，SexyMap"></a>XIVbar，SexyMap</h4><ol>
+<h4 id="其他新增"><a href="#其他新增" class="headerlink" title="其他新增"></a>其他新增</h4><ol>
 <li><p>XIVbar：</p>
 <p> <img src="http://oni7r1rj8.bkt.clouddn.com/xivbar.png" alt="xivbar"><br> 作为底部的一个信息栏显示，包含了各项信息的集合，从左侧的好友，公会角色等到中间的角色信息，专业等级，以及右侧的fps，延迟，包裹等信息的显示。调整时，也根据职业当前颜色进行配置。显示与底部补充了美感和完整性。</p>
 </li>
 <li><p>SexyMap:</p>
 <p> <img src="http://oni7r1rj8.bkt.clouddn.com/sexymap.png" alt="sexymap"><br> 这是一个纯美化的单体插件，原本的eui自带的是纯色的方形小地图，sexymap使用一些特效进行包含，不过说起来现在也是可以使用wa来自定义这样一个一模一样的效果。</p>
 </li>
+<li><p>Opie：</p>
+<p><img src="http://oni7r1rj8.bkt.clouddn.com/opie_2%20%281%29.png" alt="opie"><br>快捷键中部旋转弹出的各项，主要用来换装（猫德大佬叶子那边看见的），不过他也自带了一些其他的功能：<br><img src="http://oni7r1rj8.bkt.clouddn.com/opie%20%281%29.png" alt="opie"></p>
+</li>
+<li><p>FeralDotDamage：</p>
+<p><img src="http://oni7r1rj8.bkt.clouddn.com/fdd1%20%281%29.png" alt="fdd"><br><img src="http://oni7r1rj8.bkt.clouddn.com/fdd2%20%281%29.png" alt="fdd"><br>野德专属的一个插件了，原本我没想加进来，不过功能确实强大，主要也是为了看一下快照对于三个dot的影响，所以加进来修改了一下，保留了一个三个dot的快照和堆叠的监视以及多目标的监视，其他的就没启用了。<br>关于eui的定制就不说了，另外如果有wa需要订做或者修改的都可以提一些意见<del>如果有人看的话</del></p>
+</li>
 </ol>
-<p>关于eui的定制就不说了，另外如果有wa需要订做或者修改的都可以提一些意见<del>如果有人看的话</del></p>
 <h4 id="附件："><a href="#附件：" class="headerlink" title="附件："></a>附件：</h4><p>dk界面1（这里使用的是普通的比例界面）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/dk1.png" alt="dk"><br>dk界面2（使用21：9显示器）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/all_deathknight.jpg" alt="dk2"></p>
 <blockquote>
 <p>这里还有团队界面的单独修改的样式，以及团队中重要技能的监视<del>角色动作条右侧</del></p>
@@ -532,9 +537,9 @@
       <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
-    
       <category term="Hexo" scheme="https://xblydxj.xyz/tags/Hexo/"/>
+    
+      <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
     
   </entry>
   
@@ -716,9 +721,9 @@
       <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="Blog" scheme="https://xblydxj.xyz/tags/Blog/"/>
-    
       <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+      <category term="Blog" scheme="https://xblydxj.xyz/tags/Blog/"/>
     
   </entry>
   
