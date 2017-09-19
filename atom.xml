@@ -226,7 +226,7 @@
     <link href="https://xblydxj.xyz/2017/07/05/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C%E6%8F%92%E4%BB%B6%E6%95%B4%E5%90%88/"/>
     <id>https://xblydxj.xyz/2017/07/05/魔兽世界插件整合/</id>
     <published>2017-07-05T10:53:00.000Z</published>
-    <updated>2017-09-19T05:39:59.000Z</updated>
+    <updated>2017-09-19T05:57:34.000Z</updated>
     
     <content type="html"><![CDATA[<p>魔兽世界洁面可定制性强，也有许多整合的界面美化插件，经过几年时间断断续续的游戏生活，插件也在持续改善增强。现在主要使用eui与WA进行搭建。<br><a id="more"></a></p>
 <h3 id="魔兽世界插件整合"><a href="#魔兽世界插件整合" class="headerlink" title="魔兽世界插件整合"></a>魔兽世界插件整合</h3><p>原始界面：<br><img src="http://oni7r1rj8.bkt.clouddn.com/defaltui.jpg" alt="原始界面"><br>当前7月5号更新整合界面（使用的21:9的带鱼屏显宽）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/all_hunter.jpg" alt="整合界面"></p>
@@ -272,16 +272,17 @@
 <p><img src="http://oni7r1rj8.bkt.clouddn.com/opie_2%20%281%29.png" alt="opie"><br>快捷键中部旋转弹出的各项，主要用来换装（猫德大佬叶子那边看见的），不过他也自带了一些其他的功能：<br><img src="http://oni7r1rj8.bkt.clouddn.com/opie%20%281%29.png" alt="opie"></p>
 </li>
 <li><p>FeralDotDamage：</p>
-<p><img src="http://oni7r1rj8.bkt.clouddn.com/fdd1%20%281%29.png" alt="fdd"><br><img src="http://oni7r1rj8.bkt.clouddn.com/fdd2%20%281%29.png" alt="fdd"><br>野德专属的一个插件了，原本我没想加进来，不过功能确实强大，主要也是为了看一下快照对于三个dot的影响，所以加进来修改了一下，保留了一个三个dot的快照和堆叠的监视以及多目标的监视，其他的就没启用了。<br>关于eui的定制就不说了，另外如果有wa需要订做或者修改的都可以提一些意见<del>如果有人看的话</del></p>
+<p><img src="http://oni7r1rj8.bkt.clouddn.com/fdd1%20%281%29.png" alt="fdd"><br><img src="http://oni7r1rj8.bkt.clouddn.com/fdd2%20%281%29.png" alt="fdd"><br>野德专属的一个插件了，原本我没想加进来，不过功能确实强大，主要也是为了看一下快照对于三个dot的影响，所以加进来修改了一下，保留了一个三个dot的快照和堆叠的监视以及多目标的监视，其他的就没启用了。</p>
 </li>
 </ol>
+<p>关于eui的定制就不说了，另外如果有wa需要订做或者修改的都可以提一些意见<del>如果有人看的话</del></p>
 <h4 id="附件："><a href="#附件：" class="headerlink" title="附件："></a>附件：</h4><p>dk界面1（这里使用的是普通的比例界面）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/dk1.png" alt="dk"><br>dk界面2（使用21：9显示器）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/all_deathknight.jpg" alt="dk2"></p>
 <blockquote>
 <p>这里还有团队界面的单独修改的样式，以及团队中重要技能的监视<del>角色动作条右侧</del></p>
 </blockquote>
 <p>骑士界面：<br><img src="http://oni7r1rj8.bkt.clouddn.com/all_parartin.jpg" alt="帕拉丁"></p>
 <p>截图（夜色达拉然）：<br><img src="http://oni7r1rj8.bkt.clouddn.com/all_screenshot.jpg" alt="截图"></p>
-<p>插件整合包地址：<a href="http://pan.baidu.com/s/1qYPqoWG" target="_blank" rel="external">百度网盘</a>  密码:37c1</p>
+<p>——–7.12更新——-<br>插件整合包地址：<a href="http://pan.baidu.com/s/1qYPqoWG" target="_blank" rel="external">百度网盘</a>  密码:37c1<br>——–9.19更新——-<br>添加了opie，exrt，fdd，更新了一些eui没有的插件，并把eui烦人的捞月狗广告给去掉了<br>地址：<a href="http://pan.baidu.com/s/1skJAI8P" target="_blank" rel="external">百度网盘</a>  密码:nubf</p>
 ]]></content>
     
     <summary type="html">
@@ -537,9 +538,9 @@
       <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="Hexo" scheme="https://xblydxj.xyz/tags/Hexo/"/>
-    
       <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
+    
+      <category term="Hexo" scheme="https://xblydxj.xyz/tags/Hexo/"/>
     
   </entry>
   
@@ -721,9 +722,9 @@
       <category term="正经" scheme="https://xblydxj.xyz/categories/%E6%AD%A3%E7%BB%8F/"/>
     
     
-      <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
-    
       <category term="Blog" scheme="https://xblydxj.xyz/tags/Blog/"/>
+    
+      <category term="干货" scheme="https://xblydxj.xyz/tags/%E5%B9%B2%E8%B4%A7/"/>
     
   </entry>
   
