@@ -100,8 +100,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Xblydxj" type="application/atom+xml" />
-
 
 
 
@@ -112,22 +110,18 @@
 
 
 
-<meta name="description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。
-MVVM架构思想
-M(Mod">
+<meta name="description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。 MVVM架构思想 M(Mod">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVVM的实现以及与MVP的对比">
-<meta property="og:url" content="https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/index.html">
+<meta property="og:url" content="https://xblydxj.github.io/2017/07/18/MVVM的实现以及与MVP的对比/index.html">
 <meta property="og:site_name" content="Xblydxj">
-<meta property="og:description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。
-MVVM架构思想
-M(Mod">
+<meta property="og:description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。 MVVM架构思想 M(Mod">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-10T08:59:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVVM的实现以及与MVP的对比">
-<meta name="twitter:description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。
-MVVM架构思想
-M(Mod">
+<meta name="twitter:description" content="在接触MVP之后也了解了MVVM的部分，当时DataBinding还未成熟，也就没有细致的看过，而现在DateBinding也已经很完善，相比较于MVP我更加推荐使用MVVM进行开发，而其也需要搭配一些其他的几个框架，首先就是他的本质框架，DataBinding，而还有一个也非常合适于MVVM和MVP的框架，Dagger2。关于Dagger2的部分之后再单独进行介绍。 MVVM架构思想 M(Mod">
 
 
 
@@ -155,7 +149,7 @@ M(Mod">
 
 
 
-  <link rel="canonical" href="https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/"/>
+  <link rel="canonical" href="https://xblydxj.github.io/2017/07/18/MVVM的实现以及与MVP的对比/"/>
 
 
 
@@ -495,7 +489,7 @@ M(Mod">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://xblydxj.xyz/2017/07/18/MVVM的实现以及与MVP的对比/">
+    <link itemprop="mainEntityOfPage" href="https://xblydxj.github.io/2017/07/18/MVVM的实现以及与MVP的对比/">
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xblydxj">
       <meta itemprop="description" content="">
@@ -566,16 +560,15 @@ M(Mod">
           
             
               <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="my_icon">&#xe60d;</i>
-              </span>
-              
-                <a href="/2017/07/18/MVVM的实现以及与MVP的对比/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/07/18/MVVM的实现以及与MVP的对比/" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                    <i class="my_icon">&#xe60d;</i>
+                </span>
+                <a href="/2017/07/18/MVVM的实现以及与MVP的对比/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/18/MVVM的实现以及与MVP的对比/" itemprop="commentCount"></span>
                 </a>
-                <span> 评论</span>
-              
+              </span>
             
           
 
@@ -623,34 +616,34 @@ M(Mod">
 <p>MVVM的关键思想还是在于数据绑定，原本的mvc或是mvp每次的ui更新，其上的数据也需要随着变化都是从代码中跟随逻辑进行变化，而使用MVVM将使控件与其需要的内容进行绑定，每一次的数据更新将自动进行ui的更新。</p>
 <p>依旧还是需要动手实践一下：</p>
 <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p>MVVM框架由谷歌推荐，所以也拥有它特别的位置，从databinding开启的位置就可以看出来：<br>在gradle文件中添加下面几行代码即可开启databinding：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">dataBinding &#123;</div><div class="line">   enabled true</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dataBinding &#123;</span><br><span class="line">   enabled true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>非常简单的开启方式。</p>
-<h4 id="xml界面"><a href="#xml界面" class="headerlink" title="xml界面"></a>xml界面</h4><p>简单写一个界面作为示范，选用一个每日一文的接口：<a href="https://interface.meiriyiwen.com/article/today" target="_blank" rel="external">https://interface.meiriyiwen.com/article/today</a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">layout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"com.xblydxj.mvvmdemo.Article.DataBean"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">variable</span></span></div><div class="line">            <span class="attr">name</span>=<span class="string">"article"</span></div><div class="line">            <span class="attr">type</span>=<span class="string">"DataBean"</span>/&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">data</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></div><div class="line">        <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></div><div class="line">        <span class="attr">tools:context</span>=<span class="string">"com.xblydxj.mvvmdemo.MainActivity"</span>&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/time + article.date.curr&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/author + article.author&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/title + article.title&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/digest + article.digest&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></div><div class="line">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></div><div class="line">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/content + article.content&#125;"</span></div><div class="line">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</div><div class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">layout</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="xml界面"><a href="#xml界面" class="headerlink" title="xml界面"></a>xml界面</h4><p>简单写一个界面作为示范，选用一个每日一文的接口：<a href="https://interface.meiriyiwen.com/article/today" target="_blank" rel="noopener">https://interface.meiriyiwen.com/article/today</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">layout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">data</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"com.xblydxj.mvvmdemo.Article.DataBean"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">variable</span></span></span><br><span class="line"><span class="tag">            <span class="attr">name</span>=<span class="string">"article"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">type</span>=<span class="string">"DataBean"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">data</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">        <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">tools:context</span>=<span class="string">"com.xblydxj.mvvmdemo.MainActivity"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/time + article.date.curr&#125;"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/author + article.author&#125;"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/title + article.title&#125;"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/digest + article.digest&#125;"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:text</span>=<span class="string">"@&#123;@string/content + article.content&#125;"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:layout_margin</span>=<span class="string">"5dp"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>xml的变化非常明显，首先最外层的包裹已经变化了，根节点为<layout>标签，而上方使用<data>标签将本页面所需要的内容提供出来，下方即为正常的ui界面。</data></layout></p>
-<h4 id="bean的提供"><a href="#bean的提供" class="headerlink" title="bean的提供"></a>bean的提供</h4><p>根据<a href="https://interface.meiriyiwen.com/article/today" target="_blank" rel="external">每日一文</a>的json提供，我们先写出他对应的bean类：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Article</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> DataBean data;</div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DataBean</span> </span>&#123;</div><div class="line">        <span class="keyword">public</span> DateBean date;</div><div class="line">        <span class="keyword">public</span> String author;</div><div class="line">        <span class="keyword">public</span> String title;</div><div class="line">        <span class="keyword">public</span> String digest;</div><div class="line">        <span class="keyword">public</span> String content;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">int</span> wc;</div><div class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DateBean</span> </span>&#123;</div><div class="line">            <span class="keyword">public</span> String curr;</div><div class="line">            <span class="keyword">public</span> String prev;</div><div class="line">            <span class="keyword">public</span> String next;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="bean的提供"><a href="#bean的提供" class="headerlink" title="bean的提供"></a>bean的提供</h4><p>根据<a href="https://interface.meiriyiwen.com/article/today" target="_blank" rel="noopener">每日一文</a>的json提供，我们先写出他对应的bean类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Article</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> DataBean data;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DataBean</span> </span>&#123;</span><br><span class="line">        <span class="keyword">public</span> DateBean date;</span><br><span class="line">        <span class="keyword">public</span> String author;</span><br><span class="line">        <span class="keyword">public</span> String title;</span><br><span class="line">        <span class="keyword">public</span> String digest;</span><br><span class="line">        <span class="keyword">public</span> String content;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> wc;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DateBean</span> </span>&#123;</span><br><span class="line">            <span class="keyword">public</span> String curr;</span><br><span class="line">            <span class="keyword">public</span> String prev;</span><br><span class="line">            <span class="keyword">public</span> String next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>去除了一些set，get方法，改为public，以便调用。<br>转向xml部分：<br>在上部分的data标签中，我们需要提供变量，以供显示：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">data</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"com.xblydxj.mvvmdemo.Article.DataBean"</span>/&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">variable</span></span></div><div class="line">       <span class="attr">name</span>=<span class="string">"article"</span></div><div class="line">       <span class="attr">type</span>=<span class="string">"DataBean"</span>/&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">data</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">data</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"com.xblydxj.mvvmdemo.Article.DataBean"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">variable</span></span></span><br><span class="line"><span class="tag">       <span class="attr">name</span>=<span class="string">"article"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">type</span>=<span class="string">"DataBean"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">data</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>在其中使用import标签注入，在定义一个变量以供调用。<br>而下方每一个用于显示内容的textview，其text的显示属性将上方提供的数据进行绑定：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:text="@&#123;article.content&#125;"</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:text="@&#123;article.content&#125;"</span><br></pre></td></tr></table></figure>
 <p>用于显示bean中content内容的TextView也将上方data提供的article中的content进行绑定，格式也真是这样。</p>
 <h4 id="Activty部分"><a href="#Activty部分" class="headerlink" title="Activty部分"></a>Activty部分</h4><p>这一部分完成双向绑定的工作，但和mvp不同的是，由于大部分ui是由数据控制进行改变的，所以mvvm中的activity已经节省了许多工作，所以这里的activity也包含着model层的工作，依旧是集中的。</p>
 <p>其实这一点是值得吐槽的：MVP架构整体的解耦非常彻底，但是用于工程时很明显的一个弊端就是，类文件增加翻倍，而mvvm并没有这样的问题，他更自由。</p>
 <p>这里为了方便，我再gradle中添加了rxjava与retrofit的依赖用于网络请求部分的编写。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">compile &apos;com.squareup.okhttp3:okhttp:3.4.1&apos;</div><div class="line">compile &apos;com.squareup.okio:okio:1.9.0&apos;</div><div class="line">compile &apos;io.reactivex:rxandroid:1.2.1&apos;</div><div class="line">compile &apos;io.reactivex:rxjava:1.2.1&apos;</div><div class="line">compile &apos;com.artemzin.rxjava:proguard-rules:1.2.1.0&apos;</div><div class="line">compile &apos;com.squareup.retrofit2:retrofit:2.0.0-beta4&apos;</div><div class="line">compile &apos;com.squareup.retrofit2:converter-gson:2.0.0-beta4&apos;</div><div class="line">compile &apos;com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4&apos;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.squareup.okhttp3:okhttp:3.4.1&apos;</span><br><span class="line">compile &apos;com.squareup.okio:okio:1.9.0&apos;</span><br><span class="line">compile &apos;io.reactivex:rxandroid:1.2.1&apos;</span><br><span class="line">compile &apos;io.reactivex:rxjava:1.2.1&apos;</span><br><span class="line">compile &apos;com.artemzin.rxjava:proguard-rules:1.2.1.0&apos;</span><br><span class="line">compile &apos;com.squareup.retrofit2:retrofit:2.0.0-beta4&apos;</span><br><span class="line">compile &apos;com.squareup.retrofit2:converter-gson:2.0.0-beta4&apos;</span><br><span class="line">compile &apos;com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4&apos;</span><br></pre></td></tr></table></figure>
 <p>在进行activity书写前，我们确保了xml文件的正确性，在studio中提前进行一次编译，这时databinding将为我们生成一个文件，原xml文件名为：activity_main.xml 而对应的生成的类文件名即为：ActivityMainBinding。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</div><div class="line"></div><div class="line">    ActivityMainBinding mBinding;</div><div class="line"></div><div class="line">    Api mRetrofit = <span class="keyword">new</span> Retrofit.Builder()</div><div class="line">            .baseUrl(<span class="string">"https://interface.meiriyiwen.com/"</span>)</div><div class="line">            .addConverterFactory(GsonConverterFactory.create())</div><div class="line">            .client(<span class="keyword">new</span> OkHttpClient.Builder().build())</div><div class="line">            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</div><div class="line">            .build()</div><div class="line">            .create(Api.class);</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</div><div class="line">        mBinding = DataBindingUtil.setContentView(<span class="keyword">this</span>, R.layout.activity_main);</div><div class="line">        mRetrofit.getArticle()</div><div class="line">                .subscribeOn(Schedulers.io())</div><div class="line">                .observeOn(AndroidSchedulers.mainThread())</div><div class="line">                .subscribe(<span class="keyword">new</span> Action1&lt;Article&gt;() &#123;</div><div class="line">                    <span class="meta">@Override</span></div><div class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Article article)</span> </span>&#123;</div><div class="line">                        mBinding.setArticle(article.data);</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    ActivityMainBinding mBinding;</span><br><span class="line"></span><br><span class="line">    Api mRetrofit = <span class="keyword">new</span> Retrofit.Builder()</span><br><span class="line">            .baseUrl(<span class="string">"https://interface.meiriyiwen.com/"</span>)</span><br><span class="line">            .addConverterFactory(GsonConverterFactory.create())</span><br><span class="line">            .client(<span class="keyword">new</span> OkHttpClient.Builder().build())</span><br><span class="line">            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</span><br><span class="line">            .build()</span><br><span class="line">            .create(Api.class);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        mBinding = DataBindingUtil.setContentView(<span class="keyword">this</span>, R.layout.activity_main);</span><br><span class="line">        mRetrofit.getArticle()</span><br><span class="line">                .subscribeOn(Schedulers.io())</span><br><span class="line">                .observeOn(AndroidSchedulers.mainThread())</span><br><span class="line">                .subscribe(<span class="keyword">new</span> Action1&lt;Article&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">call</span><span class="params">(Article article)</span> </span>&#123;</span><br><span class="line">                        mBinding.setArticle(article.data);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如上，非常的精简，除了绑定部分的两行代码以外，剩余部分都是网络请求的一些初始化，一些mvc和mvp中需要做的关于ui与数据的显示已经全部由databinding帮我们做了。</p>
 <p>在activity中首先我们在onCreate里去除了原有的setContentView的这行代码，而改为：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ActivityMainBinding mBinding = DataBindingUtil.setContentView(<span class="keyword">this</span>, R.layout.activity_main);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ActivityMainBinding mBinding = DataBindingUtil.setContentView(<span class="keyword">this</span>, R.layout.activity_main);</span><br></pre></td></tr></table></figure>
 <p>抽取为成员变量以便调用。这一步即是替代了原有的setContentView。</p>
 <p>之后便是直接开始retrofit的网络请求部分，先进行他的api定义：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Api</span> </span>&#123;</div><div class="line">    <span class="meta">@GET</span>(<span class="string">"article/today"</span>)</div><div class="line">    <span class="function">Observable&lt;Article&gt; <span class="title">getArticle</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Api</span> </span>&#123;</span><br><span class="line">    <span class="meta">@GET</span>(<span class="string">"article/today"</span>)</span><br><span class="line">    <span class="function">Observable&lt;Article&gt; <span class="title">getArticle</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>后续步骤就在activity中进行，成员变量的初始化，然后由retrofit进行请求，之后再在订阅成功后的next中将databinding需要的数据提供给他：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mBinding.setArticle(article.data);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mBinding.setArticle(article.data);</span><br></pre></td></tr></table></figure>
 <p>这样即完成了一个简单的MVVM的构建。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一个比较关键的使用，是关于recyclerview或是listview在这里的使用。databinding的recyclerview部分有些麻烦，但思想依旧是相同的，具体可以看这篇博客：<a href="https://github.com/LyndonChin/MasteringAndroidDataBinding" target="_blank" rel="external">精通DataBinding</a></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一个比较关键的使用，是关于recyclerview或是listview在这里的使用。databinding的recyclerview部分有些麻烦，但思想依旧是相同的，具体可以看这篇博客：<a href="https://github.com/LyndonChin/MasteringAndroidDataBinding" target="_blank" rel="noopener">精通DataBinding</a></p>
 <p>但说回来，再某些时候，如果觉得使用databinding不熟练或是不方便，可以立马就转回原有的mvc写法，只是数据的部分再次归还给了activity，但不影响我们项目整体的编写。</p>
 <p>如今databinding已经成熟，从项目的角度讲，相比较于MVP我更加推荐MVVM的写法。ui与逻辑的分离更加彻底。并且没有更多的文件增加。熟练掌握databinding之后会很舒服。</p>
 
@@ -729,7 +722,12 @@ M(Mod">
           
   <div class="comments" id="comments">
     
-      <div id="SOHUCS"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -808,13 +806,6 @@ M(Mod">
         </nav>
 
         
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
 
         <div class="links-of-author motion-element">
           
@@ -831,7 +822,7 @@ M(Mod">
               <span class="links-of-author-item">
                 <a href="https://www.zhihu.com/people/Siberia_Snow" target="_blank" title="知乎">
                   
-                    <i class="fa fa-fw fa-weibo"></i>
+                    <i class="fa fa-fw fa-zhihu"></i>
                   
                   知乎
                 </a>
@@ -1030,6 +1021,26 @@ M(Mod">
 
   
 
+    
+      <script id="dsq-count-scr" src="https://xblydxj.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://xblydxj.github.io/2017/07/18/MVVM的实现以及与MVP的对比/';
+          this.page.identifier = '2017/07/18/MVVM的实现以及与MVP的对比/';
+          this.page.title = 'MVVM的实现以及与MVP的对比';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://xblydxj.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -1051,25 +1062,6 @@ M(Mod">
 
 
 
-  
-
-
-
-
-  
-    <script type="text/javascript">
-    (function(){
-      var appid = 'cyt9z0xzL';
-      var conf = '227295eb8809662a0587c75c0024680f';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
-        window.changyan.api.config({appid:appid,conf:conf})});
-      }
-    })();
-    </script>
-    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
-  
 
 
 
