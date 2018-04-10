@@ -1,0 +1,1525 @@
+<!doctype html>
+
+
+
+  
+
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+  
+
+
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,快应用," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="小程序刚出那会我还很兴奋，觉得微信好厉害，应用做平台扩展应用之上的小程序这样的产品，不过兴起一小段时间后再次沉寂，毕竟用户的习惯并没有那么容易改过来。  这没多久，小程序再次发力了，原本不做游戏，也出了各种各样的小游戏，与微信整个平台更加紧密连接，但这些夺走了生产厂家的许多东西。硬件厂家们预装软件因为小程序的出现减少了，这一部分利润消失让几大硬件厂意识到了，也做出了这个对策。  快应用的诞生就">
+<meta name="keywords" content="Android,快应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快应用初试">
+<meta property="og:url" content="https://xblydxj.github.io/2018/04/09/快应用初试/index.html">
+<meta property="og:site_name" content="Xblydxj">
+<meta property="og:description" content="小程序刚出那会我还很兴奋，觉得微信好厉害，应用做平台扩展应用之上的小程序这样的产品，不过兴起一小段时间后再次沉寂，毕竟用户的习惯并没有那么容易改过来。  这没多久，小程序再次发力了，原本不做游戏，也出了各种各样的小游戏，与微信整个平台更加紧密连接，但这些夺走了生产厂家的许多东西。硬件厂家们预装软件因为小程序的出现减少了，这一部分利润消失让几大硬件厂意识到了，也做出了这个对策。  快应用的诞生就">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/fastapp-2.png">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/fastapp-1.png">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/fastapp-6.png">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/fastapp-3.jpeg">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/fastapp-4.jpeg">
+<meta property="og:updated_time" content="2018-04-10T19:34:31.265Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快应用初试">
+<meta name="twitter:description" content="小程序刚出那会我还很兴奋，觉得微信好厉害，应用做平台扩展应用之上的小程序这样的产品，不过兴起一小段时间后再次沉寂，毕竟用户的习惯并没有那么容易改过来。  这没多久，小程序再次发力了，原本不做游戏，也出了各种各样的小游戏，与微信整个平台更加紧密连接，但这些夺走了生产厂家的许多东西。硬件厂家们预装软件因为小程序的出现减少了，这一部分利润消失让几大硬件厂意识到了，也做出了这个对策。  快应用的诞生就">
+<meta name="twitter:image" content="http://oni7r1rj8.bkt.clouddn.com/fastapp-2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xblydxj.github.io/2018/04/09/快应用初试/"/>
+
+
+
+
+
+  <title>快应用初试 | Xblydxj</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+<div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+<script>
+  'use strict';
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor)
+          descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    } return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    } subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass, enumerable: false, writable: true, configurable: true
+      }
+    });
+    if (superClass)
+      Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+  var Circle = function () {
+    function Circle(x, y) {
+      _classCallCheck(this, Circle);
+      this.x = x;
+      this.y = y;
+      this.r = Math.random() * 10;
+      this._mx = Math.random();
+      this._my = Math.random();
+    }
+    _createClass(Circle, [{
+      key: 'drawCircle',
+      value: function drawCircle(ctx) {
+        ctx.beginPath();
+//arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
+        ctx.arc(this.x, this.y, this.r, 0, 360);
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+        ctx.fill();
+      }
+    }, {
+      key: 'drawLine',
+      value: function drawLine(ctx, _circle) {
+        var dx = this.x - _circle.x;
+        var dy = this.y - _circle.y;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 150) {
+          ctx.beginPath();
+          ctx.moveTo(this.x, this.y); //起始点
+          ctx.lineTo(_circle.x, _circle.y); //终点
+          ctx.closePath();
+          ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+          ctx.stroke();
+        }
+      }
+    }, {
+      key: 'move',
+      value: function move(w, h) {
+        this._mx = this.x < w && this.x > 0 ? this._mx : -this._mx;
+        this._my = this.y < h && this.y > 0 ? this._my : -this._my;
+        this.x += this._mx / 2;
+        this.y += this._my / 2;
+      }
+    }]);
+    return Circle;
+  }();
+  var currentCirle = function (_Circle) {
+    _inherits(currentCirle, _Circle);
+    function currentCirle(x, y) {
+      _classCallCheck(this, currentCirle);
+      return _possibleConstructorReturn(this, (currentCirle.__proto__ || Object.getPrototypeOf(currentCirle)).call(this, x, y));
+    }
+    _createClass(currentCirle, [{
+      key: 'drawCircle',
+      value: function drawCircle(ctx) {
+        ctx.beginPath();
+//this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+        this.r = 8;
+        ctx.arc(this.x, this.y, this.r, 0, 360);
+        ctx.closePath();
+//ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+        ctx.fillStyle = 'rgba(77, 182, 172, 0.6)';
+        ctx.fill();
+      }
+    }]);
+    return currentCirle;
+  }(Circle);
+  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var w = canvas.width = canvas.offsetWidth;
+  var h = canvas.height = canvas.offsetHeight;
+  var circles = [];
+  var current_circle = new currentCirle(0, 0);
+  var draw = function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].move(w, h);
+      circles[i].drawCircle(ctx);
+      for (var j = i + 1; j < circles.length; j++) {
+        circles[i].drawLine(ctx, circles[j]);
+      }
+    }
+    if (current_circle.x) {
+      current_circle.drawCircle(ctx);
+      for (var k = 1; k < circles.length; k++) {
+        current_circle.drawLine(ctx, circles[k]);
+      }
+    }
+    requestAnimationFrame(draw);
+  };
+  var init = function init(num) {
+    for (var i = 0; i < num; i++) {
+      circles.push(new Circle(Math.random() * w, Math.random() * h));
+    }
+    draw();
+  };
+  window.addEventListener('load', init(60));
+  window.onmousemove = function (e) {
+    e = e || window.event;
+    current_circle.x = e.clientX;
+    current_circle.y = e.clientY;
+  };
+  window.onmouseout = function () {
+    current_circle.x = null;
+    current_circle.y = null;
+  };
+</script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div id="top" class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xblydxj</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-collection">
+          <a href="/collection" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />
+            
+            收集
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://xblydxj.github.io/2018/04/09/快应用初试/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xblydxj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xblydxj">
+    </span>
+
+    
+      <header class="post-header" xlink:href="/2018/04/09/快应用初试/">
+        
+        
+          <div class="post-picture" style="background-image: url(http://oni7r1rj8.bkt.clouddn.com/fastapp-9.png)" itemprop="url">
+            <h2 style="color:#ffffff" class="post-title"
+                                                       itemprop="name headline">快应用初试</h2>
+          </div>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe60a;</i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time style="color: #333333" title="创建于" itemprop="dateCreated datePublished"
+                    datetime="2018-04-09T17:43:13+08:00">
+                2018-04-09
+              </time>
+            
+
+
+
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe603;</i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/正经/" itemprop="url" rel="index">
+                    <span itemprop="name">正经</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe60d;</i>
+              </span>
+              
+                <a href="/2018/04/09/快应用初试/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/04/09/快应用初试/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2018/04/09/快应用初试/" class="leancloud_visitors" data-flag-title="快应用初试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="my_icon">&#xe60c;</i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>  小程序刚出那会我还很兴奋，觉得微信好厉害，应用做平台扩展应用之上的小程序这样的产品，不过兴起一小段时间后再次沉寂，毕竟用户的习惯并没有那么容易改过来。<br>  这没多久，小程序再次发力了，原本不做游戏，也出了各种各样的小游戏，与微信整个平台更加紧密连接，但这些夺走了生产厂家的许多东西。硬件厂家们预装软件因为小程序的出现减少了，这一部分利润消失让几大硬件厂意识到了，也做出了这个对策。<br>  快应用的诞生就是对标小程序，同样极小的，不需要安装可以称为应用的东西，并且相对小程序有更好的使用体验<del>个人感觉并不能搞过小程序，微信难以撼动</del>。</p>
+<p>直接入手吧：</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>几个必要的软件：</p>
+<ol>
+<li><p>NodeJs：<br>需安装6.0以上8.0以下版本的NodeJS，推荐<a href="https://nodejs.org/download/release/v6.11.3/" target="_blank" rel="noopener">v6.11.3</a></p>
+</li>
+<li><p>hap-toolkit：<br>使用npm安装：<br><code>npm install -g hap-toolkit</code><br>之后使用npm时可能会出现类似<br><code>Error: Cannot find module:......</code><br>这样的错误，可以使用:<br><code>hap update --force</code><br>然后不再需要npm install，直接执行之后如<code>npm run build</code>等的命令。</p>
+</li>
+<li><p>快应用调试器：<br><a href="https://www.quickapp.cn/docCenter/post/69" target="_blank" rel="noopener">下载链接</a><br>用于快速调试安装更新开发快应用的工具，不过也可以直接使用hbuilder内部自带的运行，方便快捷<del>除了偶尔会出现点奇怪的错误</del><br>命令行中进入项目根目录后：<br><code>npm run server</code><br>开启临时服务器，使用调试器上的扫码安装扫描该二维码即可安装，不过经常容易出现更新安装失败的问题，所以可以在开启server之后使用：<br><code>npm run build</code><br>打包出rpk文件的安装包，在根目录下的dist文件夹里，第一次可能需要手动拖入手机，在调试器内点击本地安装进行安装，之后下一次更新只要server开着即可直接使用build命令直接打包更新。</p>
+</li>
+<li><p>平台预览版：<br>调试器安装完如果未安装预览版会提示下载并安装，<br><img src="http://oni7r1rj8.bkt.clouddn.com/fastapp-2.png" alt="调试器1"><br>之后三个按钮也可以点击了<br><img src="http://oni7r1rj8.bkt.clouddn.com/fastapp-1.png" alt="调试器2"></p>
+<p>开发使用的ide比较宽泛，从记事本到webstorm vscode都可以，android studio也可以，只是一些文件格式需要加入识别，和小程序weex相似都有各自的文件格式，不过都是使用的js进行开发。<br>不过在这里推荐一款轻便的编辑器<a href="http://quickapp.dcloud.io/" target="_blank" rel="noopener">HBuilder</a>，运行调试编译都可以在这里进行，所以也就不需要调试器了。<br><img src="http://oni7r1rj8.bkt.clouddn.com/fastapp-6.png" alt="hbuilder"></p>
+</li>
+</ol>
+<h3 id="动手"><a href="#动手" class="headerlink" title="动手"></a>动手</h3><ol>
+<li><p>创建项目<br> 输入：<code>hap init ProjectName</code>创建一个项目，修改为当前项目的结构，目录结构如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">├── sign                      rpk包签名模块</span><br><span class="line">│   └── debug                 调试环境</span><br><span class="line">│       ├── certificate.pem   证书文件</span><br><span class="line">│       └── private.pem       私钥文件</span><br><span class="line">├── dist                      使用npm run build命令打包的rpk文件目录</span><br><span class="line">├── src</span><br><span class="line">│   ├── Common                公用的资源和组件文件</span><br><span class="line">│   │   └── logo.png          应用图标</span><br><span class="line">│   ├── WebView               文章展示目录</span><br><span class="line">│   │   └── index.ux          文章展示使用的webview页面</span><br><span class="line">│   ├── Main                  主页目录</span><br><span class="line">│   |   └── index.ux          主页页面</span><br><span class="line">│   ├── app.ux                APP文件，可引入公共脚本，暴露公共数据和方法等</span><br><span class="line">│   └── manifest.json         项目配置文件，配置应用图标、页面路由等</span><br><span class="line">│   └── util.js               创建项目自动创建的文件</span><br><span class="line">└── package.json              定义项目需要的各种模块及配置信息</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本次使用的是<a href="http://www.wanandroid.com/blog/show/2" target="_blank" rel="noopener">玩安卓的api</a>，感谢鸿洋大神！只写个主页以及文章，毕竟只是练手。</p>
+</blockquote>
+</li>
+<li><p>首先是manifest.json的修改<br> 代码如下：</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">/*包名*/</span></span><br><span class="line">  <span class="string">"package"</span>: <span class="string">"com.xblydxj.fastAppDemo"</span>,  </span><br><span class="line">  <span class="comment">/*应用名*/</span></span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"快应用小入门"</span>,</span><br><span class="line">  <span class="comment">/*版本名称和版本号*/</span></span><br><span class="line">  <span class="string">"versionName"</span>: <span class="string">"1.0.0"</span>,</span><br><span class="line">  <span class="string">"versionCode"</span>: <span class="string">"1"</span>,</span><br><span class="line">  <span class="comment">/*支持的最小平台版本号*/</span></span><br><span class="line">  <span class="string">"minPlatformVersion"</span>: <span class="string">"100"</span>,</span><br><span class="line">  <span class="comment">/*应用图标*/</span></span><br><span class="line">  <span class="string">"icon"</span>: <span class="string">"/Common/logo.png"</span>,</span><br><span class="line">  <span class="comment">/*接口*/</span></span><br><span class="line">  <span class="string">"features"</span>: [</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"system.prompt"</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"system.router"</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"system.shortcut"</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"system.fetch"</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"system.webview"</span> &#125;,</span><br><span class="line">    &#123; <span class="string">"name"</span>: <span class="string">"system.storage"</span> &#125;,</span><br><span class="line">		&#123; <span class="string">"name"</span>: <span class="string">"system.share"</span> &#125;,</span><br><span class="line">		&#123; <span class="string">"name"</span>: <span class="string">"system.clipboard"</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"permissions"</span>: [</span><br><span class="line">    &#123; <span class="string">"origin"</span>: <span class="string">"*"</span> &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="comment">/*控制台可查看的日志输出级别*/</span></span><br><span class="line">  <span class="string">"config"</span>: &#123;</span><br><span class="line">    <span class="string">"logLevel"</span>: <span class="string">"debug"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/*路由*/</span></span><br><span class="line">  <span class="string">"router"</span>: &#123;</span><br><span class="line">    <span class="string">"entry"</span>: <span class="string">"Main"</span>,</span><br><span class="line">    <span class="string">"pages"</span>: &#123;</span><br><span class="line">      <span class="string">"Main"</span>: &#123;</span><br><span class="line">        <span class="string">"component"</span>: <span class="string">"index"</span></span><br><span class="line">      &#125;,</span><br><span class="line">			<span class="string">"Webview"</span>:&#123;</span><br><span class="line">				<span class="string">"component"</span>: <span class="string">"index"</span></span><br><span class="line">			&#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/*UI配置*/</span></span><br><span class="line">  <span class="string">"display"</span>: &#123;</span><br><span class="line">    <span class="string">"titleBarBackgroundColor"</span>: <span class="string">"#26a69a"</span>,</span><br><span class="line">    <span class="string">"titleBarTextColor"</span>: <span class="string">"#ffffff"</span>,</span><br><span class="line">    <span class="string">"pages"</span>: &#123;</span><br><span class="line">      <span class="string">"Main"</span>: &#123;</span><br><span class="line">        <span class="string">"titleBarText"</span>: <span class="string">"主页"</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>主页</p>
+<ul>
+<li><p>主页布局：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">refresh</span> @<span class="attr">refresh</span>=<span class="string">"refresh"</span> <span class="attr">refreshing</span>=<span class="string">"&#123;&#123;isRefreshing&#125;&#125;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">list</span> <span class="attr">class</span>=<span class="string">"home-page"</span> <span class="attr">onscrollbottom</span>=<span class="string">"loadMoreData"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">list-item</span> <span class="attr">type</span>=<span class="string">"banner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">swiper</span> <span class="attr">class</span>=<span class="string">"banner"</span> <span class="attr">autoplay</span>=<span class="string">"true"</span> <span class="attr">interval</span>=<span class="string">"4000"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">stack</span> <span class="attr">class</span>=<span class="string">"banner"</span> <span class="attr">for</span>=<span class="string">"&#123;&#123;bannerlist&#125;&#125;"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"banner-image"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;$item.imagePath&#125;&#125;"</span> <span class="attr">onclick</span>=<span class="string">"openArticle($item.url, '', $item.title)"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">stack</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">list-item</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">block</span> <span class="attr">for</span>=<span class="string">"articleList"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">list-item</span> <span class="attr">type</span>=<span class="string">"article"</span>  <span class="attr">class</span>=<span class="string">"article-item"</span> <span class="attr">onclick</span>=<span class="string">"openArticle($item.link, $item.projectLink, $item.title)"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"display: flex"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"text-title"</span> <span class="attr">style</span>=<span class="string">"flex: 1"</span>&gt;</span>&#123;&#123;$item.title&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-tip"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"tip"</span>&gt;</span>分类: &#123;&#123;$item.superChapterName&#125;&#125;/&#123;&#123;$item.chapterName&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-tip"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"tip"</span>&gt;</span>作者: &#123;&#123;$item.author&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"time"</span>&gt;</span>&#123;&#123;$item.niceDate&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">list-item</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">list-item</span> <span class="attr">type</span>=<span class="string">"loadMore"</span> <span class="attr">class</span>=<span class="string">"load-more"</span> <span class="attr">if</span>=<span class="string">"articleList.length &gt; 0"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">progress</span> <span class="attr">type</span>=<span class="string">"circular"</span> <span class="attr">show</span>=<span class="string">"&#123;&#123;hasMoreData&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">progress</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">text</span> <span class="attr">show</span>=<span class="string">"&#123;&#123;hasMoreData&#125;&#125;"</span>&gt;</span>加载中<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">text</span> <span class="attr">show</span>=<span class="string">"&#123;&#123;!hasMoreData&#125;&#125;"</span>&gt;</span>没有更多了<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">list-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">refresh</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 外部由<a href="https://doc.quickapp.cn/widgets/refresh.html" target="_blank" rel="noopener">refresh</a>组件包裹，支持下拉刷新，内部由一个整体的<a href="https://doc.quickapp.cn/widgets/list.html" target="_blank" rel="noopener">list</a>组件进行排列。<br> 第一个item为banner，由<a href="https://doc.quickapp.cn/widgets/swiper.html" target="_blank" rel="noopener">swiper</a>作为banner的组件，内部包裹一个<a href="https://doc.quickapp.cn/widgets/stack.html" target="_blank" rel="noopener">stack</a>容器，容器内即为banner内部的图片。<br> 第二个item为block包裹的<a href="https://doc.quickapp.cn/widgets/list-item.html" target="_blank" rel="noopener">list-item</a>文章列表，内部为列表中单个item的布局<br> 第三个item为上拉刷新，显示内容如上，具体内部刷新逻辑为js处理。</p>
+</li>
+<li><p>主页js：</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> fetch <span class="keyword">from</span> <span class="string">'@system.fetch'</span></span><br><span class="line"><span class="keyword">import</span> webview <span class="keyword">from</span> <span class="string">'@system.webview'</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'@system.router'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    bannerlist: [],</span><br><span class="line">    articleList: [],</span><br><span class="line">    page: <span class="number">0</span>,</span><br><span class="line">    hasMoreData: <span class="literal">true</span>,</span><br><span class="line">    isRefreshing: <span class="literal">false</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  onInit() &#123;</span><br><span class="line">    <span class="keyword">this</span>.refresh(&#123;<span class="attr">refreshing</span>: <span class="literal">true</span>&#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">async</span> getBanner() &#123;</span><br><span class="line">    fetch.fetch(&#123;</span><br><span class="line">      url:<span class="string">"http://www.wanandroid.com/banner/json"</span>,</span><br><span class="line">      success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bannerlist = <span class="built_in">JSON</span>.parse(data.data).data;</span><br><span class="line">      &#125;.bind(<span class="keyword">this</span>),</span><br><span class="line">      fail: <span class="function"><span class="keyword">function</span>(<span class="params">data, code</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"failed: code="</span> + code);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">async</span> getArticle() &#123;</span><br><span class="line">    fetch.fetch(&#123;</span><br><span class="line">      url:<span class="string">'http://www.wanandroid.com/article/list/'</span> + <span class="keyword">this</span>.page + <span class="string">'/json'</span>,</span><br><span class="line">      success: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        data = <span class="built_in">JSON</span>.parse(data.data).data</span><br><span class="line">        <span class="keyword">this</span>.hasMoreData = !data.over</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.page &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">this</span>.articleList = <span class="keyword">this</span>.articleList.concat(data.datas)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">this</span>.isRefreshing = <span class="literal">false</span></span><br><span class="line">          <span class="keyword">this</span>.articleList = data.datas</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;.bind(<span class="keyword">this</span>),</span><br><span class="line">      fail: <span class="function"><span class="keyword">function</span>(<span class="params">data, code</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"failed  code="</span> + code);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  loadMoreData() &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.hasMoreData) &#123;</span><br><span class="line">      <span class="keyword">this</span>.page++</span><br><span class="line">      <span class="keyword">this</span>.getArticle()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  openArticle(link, projectLink, title) &#123;</span><br><span class="line">    <span class="keyword">var</span> url = projectLink === <span class="string">''</span> ? link : projectLink</span><br><span class="line">    <span class="keyword">if</span>(url !== <span class="string">''</span>) &#123;</span><br><span class="line">      <span class="keyword">this</span>.$app.$def.router.push(&#123;</span><br><span class="line">        uri: <span class="string">'Webview'</span>,</span><br><span class="line">        params: &#123;</span><br><span class="line">          title: title,</span><br><span class="line">          url: url</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  refresh(evt) &#123;</span><br><span class="line">    <span class="keyword">this</span>.isRefreshing = evt.refreshing</span><br><span class="line">    <span class="keyword">this</span>.page = <span class="number">0</span></span><br><span class="line">    <span class="keyword">this</span>.getBanner()</span><br><span class="line">    <span class="keyword">this</span>.getArticle()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 对应布局中使用到的一些方法，以及快应用本身的生命周期方法。<br> 主页中使用到的banner与article数据的初始化，以及一些标志位作为刷新判断。<br> getBanner使用async异步处理，进行url的请求，得到数据后json解析并赋值于bannerlist用于布局中使用显示。<br> getArticle由于有刷新的部分，内部添加了一些页面的判断修改之后同样提供给articleList。<br> 下方一些为上拉加载与下拉刷新的方法以及点击banner或者文章时跳转webview的方法。</p>
+</li>
+<li><p>主页style：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  .banner, .banner-image &#123;</span></span><br><span class="line"><span class="undefined">    width: 100%;</span></span><br><span class="line"><span class="undefined">		padding: 5px;</span></span><br><span class="line"><span class="undefined">    height: 360px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .banner-title &#123;</span></span><br><span class="line"><span class="undefined">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="undefined">    lines: 1;</span></span><br><span class="line"><span class="undefined">    text-align: center;</span></span><br><span class="line"><span class="undefined">    height: 90px;</span></span><br><span class="line"><span class="undefined">    width: 100%;</span></span><br><span class="line"><span class="undefined">    color: #ffffff;</span></span><br><span class="line"><span class="undefined">    background-color: #222222;</span></span><br><span class="line"><span class="undefined">    opacity: 0.5;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .article-item &#123;</span></span><br><span class="line"><span class="undefined">		height: 200px;</span></span><br><span class="line"><span class="undefined">    padding: 30px;</span></span><br><span class="line"><span class="undefined">    display: flex;</span></span><br><span class="line"><span class="undefined">    flex-direction: column;</span></span><br><span class="line"><span class="undefined">    border-bottom-width: 1px;</span></span><br><span class="line"><span class="undefined">    border-bottom-color: #eeeeee;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .text-tip &#123;</span></span><br><span class="line"><span class="undefined">    width: 100%;</span></span><br><span class="line"><span class="undefined">    padding: 10px;</span></span><br><span class="line"><span class="undefined">    padding-top: 30px;</span></span><br><span class="line"><span class="undefined">    padding-bottom: 30px;</span></span><br><span class="line"><span class="undefined">    border-bottom-width: 1px;</span></span><br><span class="line"><span class="undefined">    border-bottom-color: #eeeeee;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .article-item .text-title &#123;</span></span><br><span class="line"><span class="undefined">    font-size: 30px;</span></span><br><span class="line"><span class="undefined">    color: #222222;</span></span><br><span class="line"><span class="undefined">    text-overflow: ellipsis;</span></span><br><span class="line"><span class="undefined">    lines: 1;</span></span><br><span class="line"><span class="undefined">    margin-bottom: 15px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .article-item .article-tip &#123;</span></span><br><span class="line"><span class="undefined">    display: flex;</span></span><br><span class="line"><span class="undefined">    flex-direction: row;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .article-tip .tip, .article-tip .time &#123;</span></span><br><span class="line"><span class="undefined">    font-size: 24px;</span></span><br><span class="line"><span class="undefined">    color: #aaaaaa;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .time &#123;</span></span><br><span class="line"><span class="undefined">    flex: 1;</span></span><br><span class="line"><span class="undefined">    text-align: right;</span></span><br><span class="line"><span class="undefined">		margin-top: 5px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .load-more &#123;</span></span><br><span class="line"><span class="undefined">    padding: 20px;</span></span><br><span class="line"><span class="undefined">    display: flex;</span></span><br><span class="line"><span class="undefined">    flex-direction: row;</span></span><br><span class="line"><span class="undefined">    justify-content: center;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 由于快应用中的组件会被渲染为原生的组件，所以暂时还有很多不支持。只是进行一些简单的配置。</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>Webview页面</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">web</span> <span class="attr">src</span>=<span class="string">"&#123;&#123; url &#125;&#125;"</span> <span class="attr">id</span>=<span class="string">"web"</span>&gt;</span><span class="tag">&lt;/<span class="name">web</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">    data: &#123;</span></span><br><span class="line"><span class="javascript">      title: <span class="string">''</span>,</span></span><br><span class="line"><span class="javascript">      url: <span class="string">''</span></span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">    onInit () &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">this</span>.$page.setTitleBar(&#123; <span class="attr">text</span>: <span class="keyword">this</span>.title &#125;)</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 主页中获取的链接与标题将会使用路由发送至此页面进行显示。</p>
+</li>
+<li><p>app.ux中的配置</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"> &lt;script&gt;</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 应用级别的配置，供所有页面公用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="keyword">import</span> util <span class="keyword">from</span> <span class="string">'./util'</span></span><br><span class="line"> <span class="keyword">import</span> clipboard <span class="keyword">from</span> <span class="string">'@system.clipboard'</span></span><br><span class="line"> <span class="keyword">import</span> prompt <span class="keyword">from</span> <span class="string">'@system.prompt'</span></span><br><span class="line"> <span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'@system.router'</span></span><br><span class="line"> <span class="keyword">import</span> storage <span class="keyword">from</span> <span class="string">'@system.storage'</span></span><br><span class="line"> <span class="keyword">import</span> share <span class="keyword">from</span> <span class="string">'@system.share'</span></span><br><span class="line"> <span class="keyword">import</span> nativeFetch <span class="keyword">from</span> <span class="string">'@system.fetch'</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">   clipboard: clipboard,</span><br><span class="line">   prompt: prompt,</span><br><span class="line">   router: router,</span><br><span class="line">   storage: storage,</span><br><span class="line">   share: share,</span><br><span class="line">   createShortcut: util.createShortcut</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> globalRef = global.__proto__ || global</span><br><span class="line"><span class="comment">// global注入regeneratorRuntime</span></span><br><span class="line">globalRef.regeneratorRuntime = <span class="built_in">require</span>(<span class="string">'babel-runtime/regenerator'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> natives = &#123;</span><br><span class="line">   <span class="keyword">async</span> fetch (options) &#123;</span><br><span class="line">      <span class="keyword">const</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">         options.success = <span class="function"><span class="keyword">function</span> (<span class="params">data, code</span>) </span>&#123;</span><br><span class="line">            resolve(&#123; data, code &#125;)</span><br><span class="line">         &#125;</span><br><span class="line">          options.fail = <span class="function"><span class="keyword">function</span> (<span class="params">data, code</span>) </span>&#123;</span><br><span class="line">            resolve(&#123; data, code &#125;)</span><br><span class="line">          &#125;</span><br><span class="line">          nativeFetch.fetch(options)</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> p1</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    globalRef.natives = natives</span><br><span class="line"> &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在这里进行一些全局的配置，主要由接口已经全局引用和网络请求上的初始化配置。</p>
+<h3 id="成品"><a href="#成品" class="headerlink" title="成品"></a>成品</h3><p><img src="http://oni7r1rj8.bkt.clouddn.com/fastapp-3.jpeg" alt="成品1"></p>
+<p><img src="http://oni7r1rj8.bkt.clouddn.com/fastapp-4.jpeg" alt="成品2"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/快应用/" rel="tag"># 快应用</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/18/MVVM的实现以及与MVP的对比/" rel="next" title="MVVM的实现以及与MVP的对比">
+                <i class="fa fa-chevron-left"></i> MVVM的实现以及与MVP的对比
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xblydxj" />
+          <p class="site-author-name" itemprop="name">Xblydxj</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xblydxj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/Siberia_Snow" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/my/m/music/playlist?id=96179394" target="_blank" title="网易云音乐">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  网易云音乐
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动手"><span class="nav-number">2.</span> <span class="nav-text">动手</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成品"><span class="nav-number">3.</span> <span class="nav-text">成品</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xblydxj</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+  
+  <script type="text/javascript" src="/vendors/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt9z0xzL';
+      var conf = '227295eb8809662a0587c75c0024680f';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("1J56Bl3FI7jheXDEmoWREvn9-gzGzoHsz", "1S6iA1Pn8sMqm0ezrGaLvaiE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
