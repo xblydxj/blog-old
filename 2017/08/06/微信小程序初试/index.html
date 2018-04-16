@@ -1,0 +1,1549 @@
+<!doctype html>
+
+
+
+  
+
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+  
+
+
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="小程序," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="前段时间，微信公布了这样一个重磅炸弹 – 小程序。从没想过，原本作为平台之上的产物向上提升成为平台，因为原本的android应用容量不大，作为小程序这样的存在再次存于微信这样的大体量应用上。 文档中介绍的说法是：微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。我还是太年轻了，毕竟是微信，敢想也敢做，不得不说腾讯的野心真是大。 原本在他刚出现时就">
+<meta name="keywords" content="小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序初试">
+<meta property="og:url" content="https://xblydxj.github.io/2017/08/06/微信小程序初试/index.html">
+<meta property="og:site_name" content="Xblydxj">
+<meta property="og:description" content="前段时间，微信公布了这样一个重磅炸弹 – 小程序。从没想过，原本作为平台之上的产物向上提升成为平台，因为原本的android应用容量不大，作为小程序这样的存在再次存于微信这样的大体量应用上。 文档中介绍的说法是：微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。我还是太年轻了，毕竟是微信，敢想也敢做，不得不说腾讯的野心真是大。 原本在他刚出现时就">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/wechat-2.png">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/wechat-4.jpeg">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/wechat-5.jpeg">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/wechat-6.jpeg">
+<meta property="og:image" content="http://oni7r1rj8.bkt.clouddn.com/wechat-7.jpeg">
+<meta property="og:updated_time" content="2018-04-16T09:11:38.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序初试">
+<meta name="twitter:description" content="前段时间，微信公布了这样一个重磅炸弹 – 小程序。从没想过，原本作为平台之上的产物向上提升成为平台，因为原本的android应用容量不大，作为小程序这样的存在再次存于微信这样的大体量应用上。 文档中介绍的说法是：微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。我还是太年轻了，毕竟是微信，敢想也敢做，不得不说腾讯的野心真是大。 原本在他刚出现时就">
+<meta name="twitter:image" content="http://oni7r1rj8.bkt.clouddn.com/wechat-2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xblydxj.github.io/2017/08/06/微信小程序初试/"/>
+
+
+
+
+
+  <title>微信小程序初试 | Xblydxj</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+<div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+<script>
+  'use strict';
+  var _createClass = function () {
+    function defineProperties(target, props) {
+      for (var i = 0; i < props.length; i++) {
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor)
+          descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+      }
+    }
+    return function (Constructor, protoProps, staticProps) {
+      if (protoProps) defineProperties(Constructor.prototype, protoProps);
+      if (staticProps) defineProperties(Constructor, staticProps);
+      return Constructor;
+    };
+  }();
+  function _possibleConstructorReturn(self, call) {
+    if (!self) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    } return call && (typeof call === "object" || typeof call === "function") ? call : self;
+  }
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+    } subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass, enumerable: false, writable: true, configurable: true
+      }
+    });
+    if (superClass)
+      Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+  }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+  var Circle = function () {
+    function Circle(x, y) {
+      _classCallCheck(this, Circle);
+      this.x = x;
+      this.y = y;
+      this.r = Math.random() * 10;
+      this._mx = Math.random();
+      this._my = Math.random();
+    }
+    _createClass(Circle, [{
+      key: 'drawCircle',
+      value: function drawCircle(ctx) {
+        ctx.beginPath();
+//arc() 方法使用一个中心点和半径，为一个画布的当前子路径添加一条弧。
+        ctx.arc(this.x, this.y, this.r, 0, 360);
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(204, 204, 204, 0.3)';
+        ctx.fill();
+      }
+    }, {
+      key: 'drawLine',
+      value: function drawLine(ctx, _circle) {
+        var dx = this.x - _circle.x;
+        var dy = this.y - _circle.y;
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 150) {
+          ctx.beginPath();
+          ctx.moveTo(this.x, this.y); //起始点
+          ctx.lineTo(_circle.x, _circle.y); //终点
+          ctx.closePath();
+          ctx.strokeStyle = 'rgba(204, 204, 204, 0.3)';
+          ctx.stroke();
+        }
+      }
+    }, {
+      key: 'move',
+      value: function move(w, h) {
+        this._mx = this.x < w && this.x > 0 ? this._mx : -this._mx;
+        this._my = this.y < h && this.y > 0 ? this._my : -this._my;
+        this.x += this._mx / 2;
+        this.y += this._my / 2;
+      }
+    }]);
+    return Circle;
+  }();
+  var currentCirle = function (_Circle) {
+    _inherits(currentCirle, _Circle);
+    function currentCirle(x, y) {
+      _classCallCheck(this, currentCirle);
+      return _possibleConstructorReturn(this, (currentCirle.__proto__ || Object.getPrototypeOf(currentCirle)).call(this, x, y));
+    }
+    _createClass(currentCirle, [{
+      key: 'drawCircle',
+      value: function drawCircle(ctx) {
+        ctx.beginPath();
+//this.r = (this.r < 14 && this.r > 1) ? this.r + (Math.random() * 2 - 1) : 2;
+        this.r = 8;
+        ctx.arc(this.x, this.y, this.r, 0, 360);
+        ctx.closePath();
+//ctx.fillStyle = 'rgba(0,0,0,' + (parseInt(Math.random() * 100) / 100) + ')'
+        ctx.fillStyle = 'rgba(77, 182, 172, 0.6)';
+        ctx.fill();
+      }
+    }]);
+    return currentCirle;
+  }(Circle);
+  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var w = canvas.width = canvas.offsetWidth;
+  var h = canvas.height = canvas.offsetHeight;
+  var circles = [];
+  var current_circle = new currentCirle(0, 0);
+  var draw = function draw() {
+    ctx.clearRect(0, 0, w, h);
+    for (var i = 0; i < circles.length; i++) {
+      circles[i].move(w, h);
+      circles[i].drawCircle(ctx);
+      for (var j = i + 1; j < circles.length; j++) {
+        circles[i].drawLine(ctx, circles[j]);
+      }
+    }
+    if (current_circle.x) {
+      current_circle.drawCircle(ctx);
+      for (var k = 1; k < circles.length; k++) {
+        current_circle.drawLine(ctx, circles[k]);
+      }
+    }
+    requestAnimationFrame(draw);
+  };
+  var init = function init(num) {
+    for (var i = 0; i < num; i++) {
+      circles.push(new Circle(Math.random() * w, Math.random() * h));
+    }
+    draw();
+  };
+  window.addEventListener('load', init(60));
+  window.onmousemove = function (e) {
+    e = e || window.event;
+    current_circle.x = e.clientX;
+    current_circle.y = e.clientY;
+  };
+  window.onmouseout = function () {
+    current_circle.x = null;
+    current_circle.y = null;
+  };
+</script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div id="top" class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xblydxj</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-collection">
+          <a href="/collection" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />
+            
+            收集
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://xblydxj.github.io/2017/08/06/微信小程序初试/">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xblydxj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xblydxj">
+    </span>
+
+    
+      <header class="post-header" xlink:href="/2017/08/06/微信小程序初试/">
+        
+        
+          <div class="post-picture" style="background-image: url(http://oni7r1rj8.bkt.clouddn.com/wechat-1-2.png)" itemprop="url">
+            <h2 style="color:#ffffff" class="post-title"
+                                                       itemprop="name headline">微信小程序初试</h2>
+          </div>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe60a;</i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time style="color: #333333" title="创建于" itemprop="dateCreated datePublished"
+                    datetime="2017-08-06T09:33:00+08:00">
+                2017-08-06
+              </time>
+            
+
+
+
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe603;</i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/正经/" itemprop="url" rel="index">
+                    <span itemprop="name">正经</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-text">评论数</span>
+              <span class="post-meta-item-icon">
+                <i class="my_icon">&#xe60d;</i>
+              </span>
+              
+                <a href="/2017/08/06/微信小程序初试/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2017/08/06/微信小程序初试/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+             <span id="/2017/08/06/微信小程序初试/" class="leancloud_visitors" data-flag-title="微信小程序初试">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="my_icon">&#xe60c;</i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            
+            
+            
+            
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前段时间，微信公布了这样一个重磅炸弹 – 小程序。从没想过，原本作为平台之上的产物向上提升成为平台，因为原本的android应用容量不大，作为小程序这样的存在再次存于微信这样的大体量应用上。</p>
+<p>文档中介绍的说法是：<br><strong>微信小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</strong><br>我还是太年轻了，毕竟是微信，敢想也敢做，不得不说腾讯的野心真是大。</p>
+<p>原本在他刚出现时就想体验一把了，结果并不是所有人都能体验，而且毕竟刚刚开始还是有许多问题的，所以等到现在~</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol>
+<li><p>小程序有自己的开发软件：<br><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener">微信开发者工具</a><br>功能还是很齐全的<del>除了还有些坑以外</del>还是很不错的。当然用webstorm，vscode，甚至atom，sublime也能进行开发。<br>他的文件使用了自己的一套格式名称，但依旧是以js进行开发。</p>
+</li>
+<li><p>安装之后还需要一些其他的操作才能进入开发<br>首先是需要在<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1" target="_blank" rel="noopener">微信公众平台</a>中进行注册。<br>注册完成后进入小程序管理平台，在这里可以管理小程序的权限，查看数据报表，发布小程序等操作。<br>接下来在菜单中的进行如下操作：<br><img src="http://oni7r1rj8.bkt.clouddn.com/wechat-2.png" alt="开发设置"><br>保存AppID，等会儿会用到的。<br>以及第四步，将需要开发的接口保存在request合法域名内，否则开发时无法进行网络访问。本次还是使用gank的接口进行开发，感谢代码家大大。<del>当然其实这一步不需要也可以，在开发时可以进行一些设置的修改</del></p>
+</li>
+</ol>
+<h3 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h3><p>那么首先，安装完微信开发者工具后打开并登陆，右下角点击添加新项目，这里除了项目目录项目名称外还需要上面步骤中获取到的appId，新建项目。</p>
+<ol>
+<li><p>目录结构：<br>本次使用<a href="http://gank.io/api" target="_blank" rel="noopener">干货集中营</a>的api。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">├── pages                       页面文件夹</span><br><span class="line">│   ├── index                   首页文件夹</span><br><span class="line">│   │   └── index.js            首页js</span><br><span class="line">│   │   └── index.wxml          首页html</span><br><span class="line">│   │   └── index.wxss          首页style</span><br><span class="line">│   ├── main                    主页文件夹</span><br><span class="line">│   │   └── main.js             主页js</span><br><span class="line">│   │   └── main.wxml           主页html</span><br><span class="line">│   │   └── main.wxss           主页style</span><br><span class="line">│   ├── article                 文章页文件夹</span><br><span class="line">│   │   └── article.js          文章页js</span><br><span class="line">│   │   └── article.wxml        文章页html</span><br><span class="line">│   │   └── article.wxss        文章页style</span><br><span class="line">├── utils                       工具文件夹</span><br><span class="line">│   └── Constants.js            全局共享常量</span><br><span class="line">│   └── util.js                 工具类  </span><br><span class="line">├── app.js                      配置js</span><br><span class="line">├── app.json                    小程序配置页</span><br><span class="line">├── app.wxss                    配置style</span><br><span class="line">└── project.config.json         工具配置</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>首先是首页：<br>效果：<br><img src="http://oni7r1rj8.bkt.clouddn.com/wechat-4.jpeg" alt="首页"><br>点击banner上的图片后：<br><img src="http://oni7r1rj8.bkt.clouddn.com/wechat-5.jpeg" alt="首页2"></p>
+<ul>
+<li><p>index.wxml:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"userinfo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;!hasUserInfo &amp;&amp; canIUse&#125;&#125;"</span> <span class="attr">open-type</span>=<span class="string">"getUserInfo"</span> <span class="attr">bindgetuserinfo</span>=<span class="string">"getUserInfo"</span>&gt;</span> 获取头像昵称 <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:else</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">bindtap</span>=<span class="string">"bindViewTap"</span> <span class="attr">class</span>=<span class="string">"userinfo-avatar"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;userInfo.avatarUrl&#125;&#125;"</span> <span class="attr">background-size</span>=<span class="string">"cover"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"userinfo-nickname"</span>&gt;</span>&#123;&#123;userInfo.nickName&#125;&#125;\n小程序试手小Demo<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">modal</span> <span class="attr">no-cancel</span>=<span class="string">"true"</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;modalHidden&#125;&#125;"</span> <span class="attr">bindconfirm</span>=<span class="string">"onConfirmClick"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> &gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"modalImage"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;meizhi[current].url&#125;&#125;"</span> <span class="attr">mode</span>=<span class="string">"widthFix"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">modal</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper</span> <span class="attr">class</span>=<span class="string">'banner'</span> <span class="attr">indicator-dots</span>=<span class="string">"true"</span> <span class="attr">autoplay</span>=<span class="string">"&#123;&#123;isScroll&#125;&#125;"</span> <span class="attr">bindchange</span>=<span class="string">"EventHandle"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;meizhi&#125;&#125;"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;item.url&#125;&#125;"</span> <span class="attr">mode</span>=<span class="string">"aspectFit"</span> <span class="attr">class</span>=<span class="string">"banner-image"</span> <span class="attr">bindtap</span>=<span class="string">"onImageClick"</span> <span class="attr">binderror</span>=<span class="string">"imageError"</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"enter-main"</span> <span class="attr">bindtap</span>=<span class="string">"enterMain"</span>&gt;</span>进入主页   → <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 上方获取微信头像和昵称是新疆项目时本身自带的内容，修改了一些显示方式和位置，在下方留下足够空间添加了一个banner和一个进入主页的按钮，并且点击banner时能够跳出一个浏览大图的dialog。</p>
+</li>
+<li><p>index.js:</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"><span class="keyword">var</span> Constants = <span class="built_in">require</span>(<span class="string">'../../utils/Constants.js'</span>);</span><br><span class="line"><span class="keyword">var</span> Util = <span class="built_in">require</span>(<span class="string">'../../utils/util.js'</span>);</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    userInfo: &#123;&#125;,</span><br><span class="line">    hasUserInfo: <span class="literal">false</span>,</span><br><span class="line">    modalHidden: <span class="literal">true</span>,</span><br><span class="line">    canIUse: wx.canIUse(<span class="string">'button.open-type.getUserInfo'</span>),</span><br><span class="line">    meizhi: [],</span><br><span class="line">    current: <span class="number">0</span>,</span><br><span class="line">    isScroll: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//事件处理函数</span></span><br><span class="line">  bindViewTap: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: <span class="string">'../logs/logs'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">if</span> (app.globalData.userInfo) &#123;</span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        userInfo: app.globalData.userInfo,</span><br><span class="line">        hasUserInfo: <span class="literal">true</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">this</span>.data.canIUse)&#123;</span><br><span class="line">      <span class="comment">// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回</span></span><br><span class="line">      <span class="comment">// 所以此处加入 callback 以防止这种情况</span></span><br><span class="line">      app.userInfoReadyCallback = <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">          userInfo: res.userInfo,</span><br><span class="line">          hasUserInfo: <span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 在没有 open-type=getUserInfo 版本的兼容处理</span></span><br><span class="line">      wx.getUserInfo(&#123;</span><br><span class="line">        success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">          app.globalData.userInfo = res.userInfo</span><br><span class="line">          <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">            userInfo: res.userInfo,</span><br><span class="line">            hasUserInfo: <span class="literal">true</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    requestMeizhi();</span><br><span class="line">  &#125;,</span><br><span class="line">  getUserInfo: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e)</span><br><span class="line">    app.globalData.userInfo = e.detail.userInfo</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      userInfo: e.detail.userInfo,</span><br><span class="line">      hasUserInfo: <span class="literal">true</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  imageError: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      meizhi: [<span class="string">'../logo.png'</span>, <span class="string">'../logo.png'</span>, <span class="string">'../logo.png'</span>, <span class="string">'../logo.png'</span>, <span class="string">'../logo.png'</span>]</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  EventHandle:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.info(event)</span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        current: event.detail.current,</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onImageClick: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">       modalHidden: <span class="literal">false</span>,</span><br><span class="line">       isScroll: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onConfirmClick: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      modalHidden: <span class="literal">true</span>,</span><br><span class="line">      isScroll: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  enterMain: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: Constants.PAGE_MAIN,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 生命周期函数--监听页面显示</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">  onShow: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      isScroll: <span class="literal">true</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 生命周期函数--监听页面隐藏</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  onHide: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      isScroll: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">var</span> that;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">requestMeizhi</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  wx.request(&#123;</span><br><span class="line">    url: <span class="string">"https://gank.io/api/data/福利/8/1"</span>,</span><br><span class="line">    header: &#123;</span><br><span class="line">      <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (res == <span class="literal">null</span> ||</span><br><span class="line">        res.data == <span class="literal">null</span> ||</span><br><span class="line">        res.data.results == <span class="literal">null</span> ||</span><br><span class="line">        res.data.results.length &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.error(Constants.ERROR_DATA_IS_NULL);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        meizhi: res.data.results,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 包括几个部分，一个是userinfo，这是自带的部分，请求也写好了的。然后是下方banner的请求，数据保存于meizhi数组中，每次只请求前8张。然后是dialog显示的部分，显示时获取当前的资源用于dialog显示，以及停止banner的自动播放。最后是一些点击事件。</p>
+</li>
+<li><p>index.wxss:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">.userinfo &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">  align-items: center;</span><br><span class="line">  margin-top: -50px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-avatar &#123;</span><br><span class="line">  width: 128rpx;</span><br><span class="line">  height: 128rpx;</span><br><span class="line">  margin: 10rpx;</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  align-items: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.userinfo-nickname &#123;</span><br><span class="line">  margin-left: 15px;</span><br><span class="line">  font-size: 15px;</span><br><span class="line">  color: #666666;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.usermotto &#123;</span><br><span class="line">  margin-top: 50px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.banner-image&#123;</span><br><span class="line">  display: initial</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.banner&#123;</span><br><span class="line">  box-shadow: 1px 0px 6px #cccccc;</span><br><span class="line">  padding: 5px;</span><br><span class="line">  border-radius: 1%;</span><br><span class="line">  margin: 10px;</span><br><span class="line">  margin-top: 40px;</span><br><span class="line">  width: 70%;</span><br><span class="line">  height: 600rpx;</span><br><span class="line">  position: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.modalImage&#123;</span><br><span class="line">    margin: auto;</span><br><span class="line">    width: 100%;</span><br><span class="line">    height: 1000rpx</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.enter-main&#123;</span><br><span class="line">  box-shadow: 1px 1px 1px #cccccc;</span><br><span class="line">  position: relative;</span><br><span class="line">  border-radius: 0;</span><br><span class="line">  color: #fff;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">  margin-top: 40px;</span><br><span class="line">  background-color: #26a69a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> android里有的cardview，同样这里也可以使用一些style属性表现出来。</p>
+</li>
+</ul>
+</li>
+<li><p>列表主页：<br>效果预览：<br><img src="http://oni7r1rj8.bkt.clouddn.com/wechat-6.jpeg" alt="列表页"></p>
+<ul>
+<li><p>main.wxml:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">loading</span> <span class="attr">hidden</span>=<span class="string">"&#123;&#123;hidden&#125;&#125;"</span>&gt;</span></span><br><span class="line">        加载中...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">loading</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"card"</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;AndroidList&#125;&#125;"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"title-container"</span> <span class="attr">id</span>=<span class="string">"&#123;&#123;item.url&#125;&#125;&amp;title=&#123;&#123;item.desc&#125;&#125;"</span>  <span class="attr">bindtap</span>=<span class="string">"onItemClick"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"tag"</span> <span class="attr">src</span>=<span class="string">"./text.png"</span> &gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>&#123;&#123;item.desc&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"text-container"</span> <span class="attr">id</span>=<span class="string">"&#123;&#123;item.url&#125;&#125;&amp;title=&#123;&#123;item.desc&#125;&#125;"</span> <span class="attr">bindtap</span>=<span class="string">"onItemClick"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"author"</span>&gt;</span>作者：&#123;&#123;item.who&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"time"</span>&gt;</span>发布时间：&#123;&#123;item.publishedAt&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>一个请求时显示的加载中的loading组件，主页上为一个列表。</p>
+</li>
+<li><p>main.js:</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = getApp()</span><br><span class="line"><span class="keyword">var</span> Constants = <span class="built_in">require</span>(<span class="string">'../../utils/Constants.js'</span>);</span><br><span class="line"><span class="keyword">var</span> Util = <span class="built_in">require</span>(<span class="string">'../../utils/util.js'</span>);</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    AndroidList: [],</span><br><span class="line">    hidden: <span class="literal">false</span>,</span><br><span class="line">    nextPage: <span class="number">1</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      nextPage: <span class="number">1</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    requestAndroid(<span class="keyword">this</span>.data.nextPage);</span><br><span class="line">  &#125;,</span><br><span class="line">  onPullDownRefresh()&#123;</span><br><span class="line">    <span class="built_in">console</span>.info(e.detail)</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      hidden: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    requestAndroid(<span class="keyword">this</span>.data.nextPage);</span><br><span class="line">  &#125;,</span><br><span class="line">  onReachBottom()&#123;</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      hidden: <span class="literal">false</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    requestAndroid(<span class="keyword">this</span>.data.nextPage);</span><br><span class="line">  &#125;,</span><br><span class="line">  onItemClick(event)&#123;</span><br><span class="line">    <span class="built_in">console</span>.info(event.currentTarget.id)</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: Constants.PAGE_ARTICLE + <span class="string">'?id='</span> + event.currentTarget.id</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> that;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">requestAndroid</span>(<span class="params">page</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.info(page);</span><br><span class="line">  wx.request(&#123;</span><br><span class="line">    url: <span class="string">'https://gank.io/api/data/Android/20/'</span> + page,</span><br><span class="line">    header: &#123;&#125;,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">      res.data.results = modifyTime(res.data.results);</span><br><span class="line">      <span class="keyword">if</span> (page == <span class="number">1</span>) &#123;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          AndroidList: res.data.results,</span><br><span class="line">          nextPage: page + <span class="number">1</span>,</span><br><span class="line">          hidden: <span class="literal">true</span>,</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          AndroidList: that.data.AndroidList.concat(res.data.results),</span><br><span class="line">          nextPage: page + <span class="number">1</span>,</span><br><span class="line">          hidden: <span class="literal">true</span>,</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">modifyTime</span>(<span class="params">AndroidList</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;AndroidList.length;i++)&#123;</span><br><span class="line">    AndroidList[i].publishedAt = AndroidList[i].publishedAt.substring(<span class="number">5</span>,<span class="number">10</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> AndroidList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>主要是列表的请求以及loading是否显示的标志位，另外添加了一个上拉加载功能。</p>
+</li>
+<li><p>main.wxss:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">.card&#123;</span><br><span class="line">  box-shadow: 0px 1px 2px #999;</span><br><span class="line">  margin: 15px;</span><br><span class="line">  padding: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.title-container&#123;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">&#125;</span><br><span class="line">.tag&#123;</span><br><span class="line">  width:14px;</span><br><span class="line">  height: 14px;</span><br><span class="line">  margin-right: 5px;</span><br><span class="line">  margin-top: 2px;</span><br><span class="line">&#125;</span><br><span class="line">.text-container&#123;</span><br><span class="line">  margin-top: 10px;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">  justify-content: space-between;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line">.title&#123;</span><br><span class="line">  font-size: 15px;</span><br><span class="line">&#125;</span><br><span class="line">.author&#123;</span><br><span class="line">  color: #999999;</span><br><span class="line">  font-size: 12px;</span><br><span class="line">&#125;</span><br><span class="line">.time&#123;</span><br><span class="line">  color: #999999;</span><br><span class="line">  position: right;</span><br><span class="line">  font-size: 12px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 同样列表页使用一个card的样式显示，这里遇到了一个问题，单个item内标题前添加一个小的图标，没有找到text自带的方法，就自己添加了一个image，又想做到标题长度超过两行省略的动作，但是这样的代码会导致图标和标题不在同一行，暂时还未解决这个问题。</p>
+</li>
+</ul>
+</li>
+<li><p>文章页面：<br>小程序非常坑爹的不能打开外链，就是他并没有webview这个功能。很气，又拿他没办法。<br>效果预览：<br><img src="http://oni7r1rj8.bkt.clouddn.com/wechat-7.jpeg" alt="列表页"></p>
+<ul>
+<li><p>article.wxml:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"description"</span>&gt;</span>小程序不能打开外链，这有啥用？？<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>标题：&#123;&#123;title&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"imangry"</span> <span class="attr">src</span>=<span class="string">"./shengqi.jpg"</span> <span class="attr">mode</span>=<span class="string">"widthFix"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"url"</span>&gt;</span>链接：&#123;&#123;url&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"copy"</span> <span class="attr">bindtap</span>=<span class="string">'onClick'</span>&gt;</span>&#123;&#123;isCopy?"已复制":"复制"&#125;&#125;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>article.js:</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    url: <span class="string">''</span>,</span><br><span class="line">    title: <span class="string">''</span>,</span><br><span class="line">    isCopy: <span class="literal">false</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.info(options.id);</span><br><span class="line">    <span class="built_in">console</span>.info(options.title);</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      url: options.id,</span><br><span class="line">      title: options.title,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  onClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    wx.setClipboardData(&#123;</span><br><span class="line">      data: <span class="keyword">this</span>.data.url,</span><br><span class="line">      &#125;)</span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      isCopy: <span class="literal">true</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    wx.getClipboardData(&#123;</span><br><span class="line">      success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.info(res)</span><br><span class="line">      &#125;,</span><br><span class="line">      fail: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;&#125;,</span><br><span class="line">      complete: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;&#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p> 将列表页由点击事件传递过来的url和标题显示于本页，并提供复制。</p>
+</li>
+<li><p>article.wxss:</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">.container&#123;</span><br><span class="line">  padding: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.description&#123;</span><br><span class="line">  margin: 20px;</span><br><span class="line">  font-size: 18px;</span><br><span class="line">  color: #555;</span><br><span class="line">  align-items: left;</span><br><span class="line">&#125;</span><br><span class="line">.title&#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">  align-items: left;</span><br><span class="line">  margin: 10px;</span><br><span class="line">  color: #555;</span><br><span class="line">&#125;</span><br><span class="line">.imangry&#123;</span><br><span class="line">  width: 70%;</span><br><span class="line">&#125;</span><br><span class="line">.url&#123;</span><br><span class="line">  font-size: 12px;</span><br><span class="line">  color: #777;</span><br><span class="line">  margin: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.copy&#123;</span><br><span class="line">  box-shadow: 1px 1px 1px #cccccc;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 70%;</span><br><span class="line">  border-radius: 0;</span><br><span class="line">  color: #fff;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">  margin-top: 20px;</span><br><span class="line">  background-color: #26a69a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 无奈的添加一个表情。</p>
+</li>
+</ul>
+</li>
+<li><p>各个配置页面<del>只列出修改了的文件</del>:</p>
+<ul>
+<li><p>Constants.js:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//url相关</span></span><br><span class="line"><span class="keyword">var</span> BASE_URL = <span class="string">"https://gank.io/api"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//error相关</span></span><br><span class="line"><span class="keyword">var</span> ERROR_DATA_IS_NULL = <span class="string">"获取数据为空，请重试"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//各个page的URL</span></span><br><span class="line"><span class="keyword">var</span> PAGE_MAIN = <span class="string">"/pages/main/main"</span>;</span><br><span class="line"><span class="keyword">var</span> PAGE_INDEX = <span class="string">"/pages/index/index"</span>;</span><br><span class="line"><span class="keyword">var</span> PAGE_ARTICLE = <span class="string">"/pages/article/article"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  BASE_URL: BASE_URL,</span><br><span class="line">  ERROR_DATA_IS_NULL: ERROR_DATA_IS_NULL,</span><br><span class="line">  PAGE_MAIN: PAGE_MAIN,</span><br><span class="line">  PAGE_INDEX: PAGE_INDEX,</span><br><span class="line">  PAGE_ARTICLE: PAGE_ARTICLE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一些全局共享的常量。</p>
+</li>
+<li><p>app.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/main/main"</span>,</span><br><span class="line">    <span class="string">"pages/article/article"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>:<span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#26a69a"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"干货集中营"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>:<span class="string">"white"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"networkTimeout"</span>: &#123;</span><br><span class="line">    <span class="attr">"request"</span>: <span class="number">10000</span>,</span><br><span class="line">    <span class="attr">"connectSocket"</span>: <span class="number">10000</span>,</span><br><span class="line">    <span class="attr">"uploadFile"</span>: <span class="number">10000</span>,</span><br><span class="line">    <span class="attr">"downloadFile"</span>: <span class="number">10000</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"debug"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总的来说，小程序开发还是很方便的，作为纯安卓开发者入手也是很快，只需要一些js基础，不过js和java在逻辑上还是很像的。当然他提供的功能还有许多尚未完善，也有许多的坑还没有填上，期待其发展。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/小程序/" rel="tag"># 小程序</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/18/MVVM的实现以及与MVP的对比/" rel="next" title="MVVM的实现以及与MVP的对比">
+                <i class="fa fa-chevron-left"></i> MVVM的实现以及与MVP的对比
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/09/快应用初试/" rel="prev" title="快应用初试">
+                快应用初试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Xblydxj" />
+          <p class="site-author-name" itemprop="name">Xblydxj</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xblydxj" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/Siberia_Snow" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://music.163.com/#/my/m/music/playlist?id=96179394" target="_blank" title="网易云音乐">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  网易云音乐
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发"><span class="nav-number">2.</span> <span class="nav-text">开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xblydxj</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+  
+  <script type="text/javascript" src="/vendors/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyt9z0xzL';
+      var conf = '227295eb8809662a0587c75c0024680f';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (search_path.endsWith("json")) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("1J56Bl3FI7jheXDEmoWREvn9-gzGzoHsz", "1S6iA1Pn8sMqm0ezrGaLvaiE");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
